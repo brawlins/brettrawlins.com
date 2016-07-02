@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Sorting and filtering on custom columns
-date:   2014-02-11 18:38:50 -0600
+date:   2014-02-11 18:38:50 -0700
 tags:
     - wordpress
 ---

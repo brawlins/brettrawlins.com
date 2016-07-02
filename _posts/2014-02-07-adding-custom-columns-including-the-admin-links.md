@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Adding custom columns (including the admin links)
-date:   2014-02-07 17:46:39 -0600
+date:   2014-02-07 17:46:39 -0700
 tags:
     - wordpress
 ---
