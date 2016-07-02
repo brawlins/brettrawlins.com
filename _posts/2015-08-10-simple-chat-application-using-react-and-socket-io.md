@@ -11,7 +11,7 @@ tags:
 
 ## From Angular to React
 
-Life has been busy! It’s been a while since I had time to blog about anything. Hopefully I can find time to come back and record some of my learning with Angular. After about a year of developing with Angular I wanted to get my feet wet with [React](http://facebook.github.io/react/){:target="blank"} and find out what all the buzz is about.
+Life has been busy! It’s been a while since I had time to blog about anything. Hopefully I can find time to come back and record some of my learning with Angular. After about a year of developing with Angular I wanted to get my feet wet with [React](http://facebook.github.io/react/){:target="_blank"} and find out what all the buzz is about.
 
 ## First Impressions
 
@@ -21,7 +21,7 @@ One thing that seems a little clunky to me is that in order for components to co
 
 ## Demo App
 
-Here’s a little demo chat application that I put together while learning. This uses [Node.js](https://nodejs.org/){:target="blank"} and [Express](http://expressjs.com/){:target="blank"} for the server, [React](http://facebook.github.io/react/){:target="blank"} for the interface, and [Socket.io](http://socket.io/){:target="blank"} to keep clients in sync via websockets. I also used [Bower](http://bower.io/){:target="blank"} to manage local copies of the libraries. If you don’t want to use Bower, you can link to the scripts however you like. I found it to be really helpful for local development though. It’s nice to get some work done on the train during my commute, but I don’t have internet access there, so having a local copy of the resources comes in handy.
+Here’s a little demo chat application that I put together while learning. This uses [Node.js](https://nodejs.org/){:target="_blank"} and [Express](http://expressjs.com/){:target="_blank"} for the server, [React](http://facebook.github.io/react/){:target="_blank"} for the interface, and [Socket.io](http://socket.io/){:target="_blank"} to keep clients in sync via websockets. I also used [Bower](http://bower.io/){:target="_blank"} to manage local copies of the libraries. If you don’t want to use Bower, you can link to the scripts however you like. I found it to be really helpful for local development though. It’s nice to get some work done on the train during my commute, but I don’t have internet access there, so having a local copy of the resources comes in handy.
 
 ### public/index.html
 
@@ -129,7 +129,7 @@ React.render(<MessageList />, document.getElementById('messages'));
 
 Here I've defined a MessageList component which displays an unordered list of messages, followed by the MessageForm component which contains a simple form for posting a new message. MessageForm is nested inside of MessageList. At the bottom we render it by mounting the parent component to the messages div in our HTML.
 
-MessageList owns the array of chat messages, so MessageForm cannot modify it directly. Because of this we have to pass control of the submit handler up the chain to the parent which has access to the messages array. Note that this is done by [passing properties](https://facebook.github.io/react/tips/communicate-between-components.html){:target="blank"}. When we call the MessageForm component inside the render function of MessageList, we pass it a custom property ("submit") and assign that property a local function ("postIt") which handles the form submission and adds the new message to the array. In the MessageForm component's render function we access the "submit" property we assigned to it above using <span class="lang:js decode:true  crayon-inline">this.props.submit</span>. That property (which now points to a handler function on the parent component) is then assigned to the component's <span class="lang:default decode:true  crayon-inline ">onSubmit</span>  event so that it gets called when the form is submitted.
+MessageList owns the array of chat messages, so MessageForm cannot modify it directly. Because of this we have to pass control of the submit handler up the chain to the parent which has access to the messages array. Note that this is done by [passing properties](https://facebook.github.io/react/tips/communicate-between-components.html){:target="_blank"}. When we call the MessageForm component inside the render function of MessageList, we pass it a custom property ("submit") and assign that property a local function ("postIt") which handles the form submission and adds the new message to the array. In the MessageForm component's render function we access the "submit" property we assigned to it above using <span class="lang:js decode:true  crayon-inline">this.props.submit</span>. That property (which now points to a handler function on the parent component) is then assigned to the component's <span class="lang:default decode:true  crayon-inline ">onSubmit</span>  event so that it gets called when the form is submitted.
 
 This is the point I mentioned above. It seems like this could quickly get very convoluted if you have many levels of nesting. But that's how you pass things up or down the chain in React.
 
@@ -174,7 +174,7 @@ To get up and running with this code:
 * Install the server libraries: <span class="lang:default decode:true  crayon-inline ">npm install</span>
 * Install the client libraries: <span class="lang:default decode:true  crayon-inline ">bower install</span>
 * Start up your server: <span class="lang:default decode:true  crayon-inline ">node server.js</span>
-* Open up [http://localhost:3000/](http://localhost:3000/){:target="blank"} in two browser windows and chat!
+* Open up [http://localhost:3000/](http://localhost:3000/){:target="_blank"} in two browser windows and chat!
 
 ## Final Thoughts
 

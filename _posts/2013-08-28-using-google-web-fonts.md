@@ -10,7 +10,7 @@ Today I tried switching a website to web fonts. It was pretty easy to implement 
 
 ## 1. Choose a font
 
-Go to [Google Fonts](http://www.google.com/fonts){:target="blank"} and find a font family that you like. Check the box next to each style variation you want to include (light, normal, bold, italic, etc.).
+Go to [Google Fonts](http://www.google.com/fonts){:target="_blank"} and find a font family that you like. Check the box next to each style variation you want to include (light, normal, bold, italic, etc.).
 
 ## 2. Link to it from your website
 

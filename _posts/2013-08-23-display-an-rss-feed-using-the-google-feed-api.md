@@ -6,7 +6,7 @@ tags:
     - javascript
 ---
 
-Some time you may want to grab an RSS feed from another site and display it on yours. Here's how you can do it using the [Google Feed API](https://developers.google.com/feed/){:target="blank"}.
+Some time you may want to grab an RSS feed from another site and display it on yours. Here's how you can do it using the [Google Feed API](https://developers.google.com/feed/){:target="_blank"}.
 
 ## 1. Include the Google Loader script
 
@@ -27,7 +27,7 @@ Put this wherever you want the feed to be displayed. Give it an `id` attribute s
 
 ##  3. Add your script
 
-A good place to put this is just before the closing `</body>` tag of your page. You'll want to adjust the URL of the feed and the number of entries to show. You can also completely control the markup that is output. Inside the for loop you can access the properties of each entry with the entry object. See the [documentation on the JSON result](https://developers.google.com/feed/v1/devguide#resultJson){:target="blank"} format for details.
+A good place to put this is just before the closing `</body>` tag of your page. You'll want to adjust the URL of the feed and the number of entries to show. You can also completely control the markup that is output. Inside the for loop you can access the properties of each entry with the entry object. See the [documentation on the JSON result](https://developers.google.com/feed/v1/devguide#resultJson){:target="_blank"} format for details.
 
 ```html
 <script type="text/javascript">

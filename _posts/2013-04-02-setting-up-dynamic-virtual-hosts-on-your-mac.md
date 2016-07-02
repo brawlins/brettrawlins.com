@@ -12,7 +12,7 @@ In the past I've always had to make two entries for every new site I add to my l
 1. a line in my hosts file (so the site gets served locally)
 2. a VirtualHost directive in my vhosts file (to tell apache where to find the web files)
 
-This quickly becomes unsustainable. How would it be if I could just add a new folder to my apache web root and immediately load the new site in my browser? The following setup (adapted from [Glen Scott](http://www.glenscott.co.uk/blog/2012/11/10/simple-development-hosts-on-mac/){:target="blank"}) makes that possible!
+This quickly becomes unsustainable. How would it be if I could just add a new folder to my apache web root and immediately load the new site in my browser? The following setup (adapted from [Glen Scott](http://www.glenscott.co.uk/blog/2012/11/10/simple-development-hosts-on-mac/){:target="_blank"}) makes that possible!
 
 This setup uses the subdomain "local" for all locally developed sites. So if I'm working on a site called "blah.com", my local version would be at "local.blah.com". Here's how you do it:
 
@@ -128,6 +128,6 @@ mkdir -p ~/Sites/newdomain.com
 echo 'Hello World!' > ~/Sites/newdomain.com/index.html
 ```
 
-Now visit [http://local.newdomain.com/](http://local.newdomain.com/){:target="blank"} in your browser and you should see "Hello World!".
+Now visit [http://local.newdomain.com/](http://local.newdomain.com/){:target="_blank"} in your browser and you should see "Hello World!".
 
 That's it!

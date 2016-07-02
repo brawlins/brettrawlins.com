@@ -6,7 +6,7 @@ tags:
     - css
 ---
 
-CSS is getting more and more awesome all the time. The other day I discovered that you can create background patterns using the `repeating-linear-gradient` property. [Lea Verou](http://lea.verou.me){:target="blank"} has a great article that explains [how it works](http://24ways.org/2011/css3-patterns-explained/){:target="blank"}. She's created some amazing patterns in her [CSS3 Patterns Gallery](http://lea.verou.me/css3patterns/){:target="blank"} to demonstrate the power of this tool.
+CSS is getting more and more awesome all the time. The other day I discovered that you can create background patterns using the `repeating-linear-gradient` property. [Lea Verou](http://lea.verou.me){:target="_blank"} has a great article that explains [how it works](http://24ways.org/2011/css3-patterns-explained/){:target="_blank"}. She's created some amazing patterns in her [CSS3 Patterns Gallery](http://lea.verou.me/css3patterns/){:target="_blank"} to demonstrate the power of this tool.
 
 Here's my humble implementation. The marketing department wanted a link to building construction updates that looked like caution tape:
 

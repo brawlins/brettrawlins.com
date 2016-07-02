@@ -7,7 +7,7 @@ tags:
     - php
 ---
 
-[Kaltura](http://corp.kaltura.com){:target="blank"} is a video platform and content delivery network (CDN). The [Kaltura API](http://www.kaltura.com/api_v3/testmeDoc/index.php){:target="blank"} is powerful but poorly documented, so usually it takes a lot of trial and error to figure out how to do something.
+[Kaltura](http://corp.kaltura.com){:target="_blank"} is a video platform and content delivery network (CDN). The [Kaltura API](http://www.kaltura.com/api_v3/testmeDoc/index.php){:target="_blank"} is powerful but poorly documented, so usually it takes a lot of trial and error to figure out how to do something.
 
 Here's an example of how to pull down a list of videos filtered on search terms:
 
@@ -35,7 +35,7 @@ $filter->searchTextMatchOr = 'this, that, something else'; // find entries with 
 $result = $client->media->listAction($filter);
 ```
 
-As indicated by the name, they apply either AND or OR logic to the terms you supply them. The `tagsLike` method only accepts a single tag which is a little confusing since the name is plural. All the other methods will take multiple search terms in a comma-separated list. Spaces are treated as part of the search term. For a full list see the [API documentation](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaBaseEntryBaseFilter){:target="blank"}.
+As indicated by the name, they apply either AND or OR logic to the terms you supply them. The `tagsLike` method only accepts a single tag which is a little confusing since the name is plural. All the other methods will take multiple search terms in a comma-separated list. Spaces are treated as part of the search term. For a full list see the [API documentation](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaBaseEntryBaseFilter){:target="_blank"}.
 
 You can combine them to create layers of filters. For example, this would get all entries with the tag "building", and then filter those results for entries with one or more of the search terms:
 

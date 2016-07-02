@@ -59,7 +59,7 @@ WHERE post_modified >= '2014-02-10'
 ORDER BY post_modified DESC
 ```
 
-The `IGNORE` keyword suppresses any duplicate-key errors that would cause the statement to abort. See the documentation on [INSERT Syntax](http://dev.mysql.com/doc/refman/5.6/en/insert.html){:target="blank"} for details.
+The `IGNORE` keyword suppresses any duplicate-key errors that would cause the statement to abort. See the documentation on [INSERT Syntax](http://dev.mysql.com/doc/refman/5.6/en/insert.html){:target="_blank"} for details.
 
 ## 5. Get associated meta records too
 

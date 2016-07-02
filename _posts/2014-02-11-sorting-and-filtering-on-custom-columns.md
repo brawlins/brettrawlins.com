@@ -13,7 +13,7 @@ WordPress provides a hook that allows you to define which columns are sortable. 
 * `manage_edit-post_sortable_columns`
 * `manage_edit-{$post_type}_sortable_columns`
 
-Although there appears to be no Codex page to document either of these hooks, both [scribu](http://scribu.net/wordpress/custom-sortable-columns.html){:target="blank"} and [Justin Tadlock](http://justintadlock.com/archives/2011/06/27/custom-columns-for-custom-post-types){:target="blank"} have published excellent articles explaining how to use them to make your columns sortable.
+Although there appears to be no Codex page to document either of these hooks, both [scribu](http://scribu.net/wordpress/custom-sortable-columns.html){:target="_blank"} and [Justin Tadlock](http://justintadlock.com/archives/2011/06/27/custom-columns-for-custom-post-types){:target="_blank"} have published excellent articles explaining how to use them to make your columns sortable.
 
 The other hook we'll need is `pre_get_posts` which allows us to define custom callbacks to tell WordPress how to sort and filter our columns.
 
@@ -46,7 +46,7 @@ public function register_sortable_columns($columns)
 
 Now WordPress knows which columns should be sortable. However, it doesn't automatically understand *how* to sort them, so you have to provide a function to handle that process.
 
-In this function you have access to the query object, which you can then alter to perform whatever kind of sorting you want. In this example, the data for the custom columns are stored as post_meta values. First we get the column to be sorted on from the query string, and then we tell the query to sort on that meta key. You can easily adapt this to your particular sorting needs by using the appropriate [WP_Query parameters](http://codex.wordpress.org/Class_Reference/WP_Query#Parameters){:target="blank"}.
+In this function you have access to the query object, which you can then alter to perform whatever kind of sorting you want. In this example, the data for the custom columns are stored as post_meta values. First we get the column to be sorted on from the query string, and then we tell the query to sort on that meta key. You can easily adapt this to your particular sorting needs by using the appropriate [WP_Query parameters](http://codex.wordpress.org/Class_Reference/WP_Query#Parameters){:target="_blank"}.
 
 ```php
 /**

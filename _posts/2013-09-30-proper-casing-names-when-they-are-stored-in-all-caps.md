@@ -36,4 +36,4 @@ foreach ($names as $name) {
 }
 ```
 
-This still doesn't address other complexities like "van der Meer" or "de Gaulle", but it's a good start. In order to truly handle exceptions, I think you'd have to swap them out case by case, such as supplying an array of specific names and their replacements, [as described here](http://stackoverflow.com/questions/11529213/given-upper-case-names-transform-to-proper-case-handling-ohara-mcdonald/11532427#11532427){:target="blank"}. But sometimes that's impossible, like when the list of names could change at any time.
+This still doesn't address other complexities like "van der Meer" or "de Gaulle", but it's a good start. In order to truly handle exceptions, I think you'd have to swap them out case by case, such as supplying an array of specific names and their replacements, [as described here](http://stackoverflow.com/questions/11529213/given-upper-case-names-transform-to-proper-case-handling-ohara-mcdonald/11532427#11532427){:target="_blank"}. But sometimes that's impossible, like when the list of names could change at any time.

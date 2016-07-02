@@ -21,8 +21,8 @@ Since I had no need for the title column, I removed it. However this created a p
 
 WordPress provides a few hooks to help you manage your custom columns. There is a set of action and filter hooks for doing this with regular posts, and another set for custom post types. Since we're dealing with custom columns on a custom post type, the ones we need are these:
 
-* [`manage_{$post_type}_posts_columns`](http://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns){:target="blank"}
-* [`manage_{$post_type}_posts_custom_column`](http://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column){:target="blank"}
+* [`manage_{$post_type}_posts_columns`](http://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns){:target="_blank"}
+* [`manage_{$post_type}_posts_custom_column`](http://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column){:target="_blank"}
 
 The first one allows you to define the columns for your post type, and the second one actually displays them on the edit posts screen.
 
