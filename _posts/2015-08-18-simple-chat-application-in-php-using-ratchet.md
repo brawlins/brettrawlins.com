@@ -10,7 +10,7 @@ tags:
 
 In the previous post I made a [demo chat app using React and Socket.io]({% post_url 2015-08-10-simple-chat-application-using-react-and-socket.io %}). In this post we'll build that same app again, this time in PHP using Ratchet.
 
-There's a nice PHP library called [Ratchet](http://socketo.me/){:target="blank"} that simplifies working with web sockets. In this example I use [Composer](https://getcomposer.org/){:target="blank"} to manage the PHP library dependencies and handle autoloading.
+There's a nice PHP library called [Ratchet](http://socketo.me/){:target="_blank"} that simplifies working with web sockets. In this example I use [Composer](https://getcomposer.org/){:target="_blank"} to manage the PHP library dependencies and handle autoloading.
 
 ## Project Setup
 
@@ -109,7 +109,7 @@ class Chat implements MessageComponentInterface
 }
 ```
 
-Note that our Chat class implements the "MessageComponentInterface" provided by the Ratchet WsServer component. That interface exposes 4 events that our server can listen for, so we register a callback function for each one. See the [WsServer documentation](http://socketo.me/docs/websocket){:target="blank"} for more details.
+Note that our Chat class implements the "MessageComponentInterface" provided by the Ratchet WsServer component. That interface exposes 4 events that our server can listen for, so we register a callback function for each one. See the [WsServer documentation](http://socketo.me/docs/websocket){:target="_blank"} for more details.
 
 When we start up our socket server a new instance of our Chat class is created. The constructor simply creates an object to store client connections in.
 
@@ -207,7 +207,7 @@ $(function() {
 });
 ```
 
-This code runs in the client browser and allows it to connect to the socket server and send and receive messages. [The W3C WebSocket API](http://www.w3.org/TR/websockets/#the-websocket-interface){:target="blank"} exposes the same 4 events that we saw in our server code, and we define a callback function to handle each one. **Note that these event names are all lower-case though.**
+This code runs in the client browser and allows it to connect to the socket server and send and receive messages. [The W3C WebSocket API](http://www.w3.org/TR/websockets/#the-websocket-interface){:target="_blank"} exposes the same 4 events that we saw in our server code, and we define a callback function to handle each one. **Note that these event names are all lower-case though.**
 
 The `onopen` event fires when our client connects to the socket server. We log a message to the browser's console.
 
