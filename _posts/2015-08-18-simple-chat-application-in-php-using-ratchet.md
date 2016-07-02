@@ -17,7 +17,6 @@ There's a nice PHP library called [Ratchet](http://socketo.me/){:target="blank"}
 The project directory structure looks like this:
 
 ```shell
-.
 ├── bin
 ├── public
 ├── src
