@@ -11,11 +11,15 @@ Today I needed to delete a bunch of old log files to clear up some room on our s
 
 First you’ll want to run this command to make sure you’re selecting just the files you want. It’s best to use the full path so there’s no mistake!
 
-    sudo find /path/to/dir -type f -mtime +7
+```shell
+sudo find /path/to/dir -type f -mtime +7
+```
 
 Once you’re sure you want to proceed, you can add the remove command to the end like this:
 
-    sudo find /path/to/dir -type f -mtime +7 -exec rm {} \;
+```shell
+sudo find /path/to/dir -type f -mtime +7 -exec rm {} \;
+```
 
 Here’s an explanation of each part:
 
