@@ -13,6 +13,7 @@ However, sometimes your hand is forced. Like when names are stored (\*gasp\*) in
 Here's my snippet:
 
 ```php
+<?php
 // sample names
 $names = array(
     'MACDONALD, MCKAY',
