@@ -226,14 +226,20 @@ The last piece of code uses jQuery to add an event handler to the message form. 
 
 To run the app you'll need to install the PHP libraries on your server. Composer will handle that for you. Open a shell terminal on your server, navigate to the project directory and type:
 
-    composer install
+```shell
+composer install
+```
 
 If you're using the Bower file for the client libraries, type:
 
-    bower install
+```shell
+bower install
+```
 
 Then start up the web socket server we created which will listen for message events:
 
-    php bin/server.php
+```shell
+php bin/server.php
+```
 
 That will run the socket server code which will start listening for connections and events on port 8080. Then open up two browser windows and point them to wherever you're hosting the project and start chatting!
