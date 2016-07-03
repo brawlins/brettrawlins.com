@@ -53,14 +53,12 @@ Usually you want to stop rewriting at this point, so you should also include the
 This rule will redirect all requests to another site:
 
 ```apache
-# Redirect all requests to another site
 RedirectMatch 301 .* http://example.com
 ```
 
 This one redirects from one directory to another directory:
 
 ```apache
-# Redirect requests from one directory to another directory
 RedirectMatch ^/directory/(.*) /other-directory/$1
 ```
 
