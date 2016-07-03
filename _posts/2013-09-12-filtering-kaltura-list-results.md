@@ -12,6 +12,7 @@ tags:
 Here's an example of how to pull down a list of videos filtered on search terms:
 
 ```php
+<?php
 require_once('path/to/KalturaClient.php');
 
 // credentials
@@ -40,6 +41,7 @@ As indicated by the name, they apply either AND or OR logic to the terms you sup
 You can combine them to create layers of filters. For example, this would get all entries with the tag "building", and then filter those results for entries with one or more of the search terms:
 
 ```php
+<?php
 $filter->tagsLike = 'building'; // must have this tag
 $filter->searchTextMatchOr = 'big, red, barn'; // plus any of these terms
 ```
@@ -47,6 +49,7 @@ $filter->searchTextMatchOr = 'big, red, barn'; // plus any of these terms
 If you want to limit the number of results and/or paginate them, you can add a pager. Just remember to pass it to your listAction call as the second parameter. This example returns the first 3 results (3 per page, page 1):
 
 ```php
+<?php
 // pager
 $pager = new KalturaFilterPager();
 $pager->pageSize = 3;
