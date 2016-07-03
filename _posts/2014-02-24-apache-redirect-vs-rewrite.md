@@ -23,7 +23,7 @@ Server: “OK. Here’s the content of /otherpage.php.”
 
 Because a second request is made, now for a different resource, the URL obviously changes in the browser's address bar. The user is aware that his original request has been redirected to something different than what he typed.
 
-The redirect rule in your .htaccess file would look like this:
+The redirect rule in your `.htaccess` file would look like this:
 
 {% highlight apache %}
 Redirect 301 /page.php /otherpage.php
