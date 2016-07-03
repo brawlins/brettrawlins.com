@@ -51,13 +51,13 @@ RewriteRule /page.php /otherpage.php
 
 Rewriting is often used to map pretty URLs (that make sense to the user) to uglier ones on the server that actually retrieve the content. Using this technique you can take a request for something like `/shoes/heels/red` and map it to a script that serves the correct content based on query string variables, such as `/products.php?product=shoes&amp;type=heels&amp;color=red`. You probably don't want the user to be redirected to that ugly URL, so you just rewrite it to whatever it needs to be on the server side and serve up the contents. Nobody needs to know what's going on behind the scenes.
 
-However, if you DO want the user to be redirected to the new path, you can force a redirect by using the [R] flag after your rule:
+However, if you DO want the user to be redirected to the new path, you can force a redirect by using the `[R]` flag after your rule:
 
 {% highlight apache %}
 RewriteRule /page.php /otherpage.php [RL]
 {% endhighlight %}
 
-Usually you want to stop rewriting at this point, so you should also include the [L] flag to make this the last rule that gets evaluated. Otherwise, any rewrite rules that follow this one will also be applied before the redirect happens, which could result in the user being redirected to the wrong place.
+Usually you want to stop rewriting at this point, so you should also include the `[L]` flag to make this the last rule that gets evaluated. Otherwise, any rewrite rules that follow this one will also be applied before the redirect happens, which could result in the user being redirected to the wrong place.
 
 ## Examples of redirects
 
