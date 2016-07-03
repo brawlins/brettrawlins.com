@@ -25,7 +25,7 @@ Because a second request is made, now for a different resource, the URL obviousl
 
 The redirect rule in your `.htaccess` file would look like this:
 
-{% highlight apache %}
+{% highlight shell %}
 Redirect 301 /page.php /otherpage.php
 {% endhighlight %}
 
@@ -44,7 +44,7 @@ The original request was fulfilled by **substituting a different path** for the 
 
 The rewrite rule in your .htaccess file would look like this:
 
-{% highlight apache %}
+{% highlight shell %}
 RewriteEngine On
 RewriteRule /page.php /otherpage.php
 {% endhighlight %}
@@ -53,7 +53,7 @@ Rewriting is often used to map pretty URLs (that make sense to the user) to ugli
 
 However, if you DO want the user to be redirected to the new path, you can force a redirect by using the `[R]` flag after your rule:
 
-{% highlight apache %}
+{% highlight shell %}
 RewriteRule /page.php /otherpage.php [RL]
 {% endhighlight %}
 
@@ -63,14 +63,14 @@ Usually you want to stop rewriting at this point, so you should also include the
 
 This rule will redirect all requests to another site:
 
-{% highlight apache %}
+{% highlight shell %}
 # Redirect all requests to another site
 RedirectMatch 301 .* http://example.com
 {% endhighlight %}
 
 This one redirects from one directory to another directory:
 
-{% highlight apache %}
+{% highlight shell %}
 # Redirect requests from one directory to another directory
 RedirectMatch ^/directory/(.*) /other-directory/$1
 {% endhighlight %}
