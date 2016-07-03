@@ -25,7 +25,7 @@ You need to enable two things to make this work:
 
 Find the lines with these directives and uncomment them (your paths may differ):
 
-```shell
+```apacheconf
 #LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so
 ...
 #Include /private/etc/apache2/extra/httpd-vhosts.conf
@@ -35,7 +35,7 @@ Find the lines with these directives and uncomment them (your paths may differ):
 
 Paste in this block (adjust the path to your apache web root as necessary):
 
-```shell
+```apacheconf
 # This uses the requested hostname to map the file path to the web documents to
 # be served. I don't want to have to use the "local" subdomain prefix on all my
 # website folders, so the VirtualDocumentRoot will start at the second dot-
