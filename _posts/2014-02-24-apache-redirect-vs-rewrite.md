@@ -14,10 +14,12 @@ Apache rewrite rules can be very confusing at times. They're very powerful, but 
 
 A redirect is a server response that tells the client to make a new, modified request. The dialog goes something like this:
 
-> Client: “GET /page.php.”
-> Server: “Sorry, /page.php has moved. Ask for /otherpage.php instead”.
-> Client: “Fine. GET /otherpage.php then.”
-> Server: “OK. Here’s the content of /otherpage.php.”
+<blockquote>
+Client: “GET /page.php.”
+Server: “Sorry, /page.php has moved. Ask for /otherpage.php instead”.
+Client: “Fine. GET /otherpage.php then.”
+Server: “OK. Here’s the content of /otherpage.php.”
+</blockquote>
 
 Because a second request is made, now for a different resource, the URL obviously changes in the browser's address bar. The user is aware that his original request has been redirected to something different than what he typed.
 
@@ -33,8 +35,10 @@ You can send whatever response code is appropriate. If you don't give one, a 302
 
 A rewrite maps the requested path to some different path on the server, based on whatever rewrite rules are defined. The server does this without notifying the client, and then serves up the content from the new path. It goes something like this:
 
-> Client: “GET /page.php.”
-> Server: “Let me consult the rewrite rules. Ok, it looks like all requests for /page.php should be served from /otherpage.php. Here’s the content of /otherpage.php.”
+<blockquote>
+Client: “GET /page.php.”
+Server: “Let me consult the rewrite rules. Ok, it looks like all requests for /page.php should be served from /otherpage.php. Here’s the content of /otherpage.php.”
+</blockquote>
 
 The original request was fulfilled by **substituting a different path** for the one that was requested. The client is unaware that the content being served came from `/otherpage.php` because the URL remains unchanged in the address bar.
 
