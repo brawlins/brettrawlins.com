@@ -31,7 +31,7 @@ The redirect rule in your .htaccess file would look like this:
 Redirect 301 /page.php /otherpage.php
 ```
 
-You can send whatever response code is appropriate. If you don't give one, a 302 response will be sent, which is the default for a redirect. See the [list of HTTP status codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection){:target="blank"} for more information.
+You can send whatever response code is appropriate. If you don't give one, a 302 response will be sent, which is the default for a redirect. See the [list of HTTP status codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection){:target="_blank"} for more information.
 
 ##  Rewrite
 
