@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apache redirect vs. rewrite"
-date:   2014-02-24 15:58:02 -0700
+date:   2014-02-24 15:58:02 -0600
 tags:
     - apache
 ---
@@ -15,10 +15,6 @@ What is the difference between Apache redirect and rewrite?
 ## Redirect
 
 A redirect is a server response that tells the client to make a new, modified request. The dialog goes something like this:
-
-<style>
-    .dialog { font-family: andale mono, times; font-style: normal; }
-</style>
 
 <blockquote>
 <p class="dialog">Client: “GET /page.php.”</p>
