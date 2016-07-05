@@ -44,16 +44,16 @@ The original request was fulfilled by **substituting a different path** for the 
 
 The rewrite rule in your `.htaccess` file would look like this:
 
-```shell
+```apacheconfig
 RewriteEngine On
 RewriteRule /page.php /otherpage.php
 ```
 
-Rewriting is often used to map pretty URLs (that make sense to the user) to uglier ones on the server that actually retrieve the content. Using this technique you can take a request for something like `/shoes/heels/red` and map it to a script that serves the correct content based on query string variables, such as `/products.php?product=shoes&amp;type=heels&amp;color=red`. You probably don't want the user to be redirected to that ugly URL, so you just rewrite it to whatever it needs to be on the server side and serve up the contents. Nobody needs to know what's going on behind the scenes.
+Rewriting is often used to map pretty URLs (that make sense to the user) to uglier ones on the server that actually retrieve the content. Using this technique you can take a request for something like `/shoes/running/nike` and map it to a script that serves the correct content based on query string variables, such as `/products.php?product=shoes&type=running&brand=nike`. You probably don't want the user to be redirected to that ugly URL, so you just rewrite it to whatever it needs to be on the server side and serve up the contents. Nobody needs to know what's going on behind the scenes.
 
 However, if you DO want the user to be redirected to the new path, you can force a redirect by using the `[R]` flag after your rule:
 
-```shell
+```apacheconfig
 RewriteRule /page.php /otherpage.php [RL]
 ```
 
@@ -63,14 +63,14 @@ Usually you want to stop rewriting at this point, so you should also include the
 
 This rule will redirect all requests to another site:
 
-```shell
+```apacheconfig
 # Redirect all requests to another site
 RedirectMatch 301 .* http://example.com
 ```
 
 This one redirects from one directory to another directory:
 
-```shell
+```apacheconfig
 # Redirect requests from one directory to another directory
 RedirectMatch ^/directory/(.*) /other-directory/$1
 ```
