@@ -13,5 +13,6 @@ Branch cleanup is a constant housekeeping item. To make things easier I've been 
 
 It checks to see which branches have been deleted on the remote and lets you delete your local copy. First it creates a list of branches to be removed so you can edit it if you want to keep any of them. I have it aliased in my bash profile as `gpl` for "git prune local": 
 
-`alias gpl='sh ~/_myconfig/pruneLocalBranches.sh'`
-
+```
+alias gpl='sh ~/_myconfig/pruneLocalBranches.sh'
+```
