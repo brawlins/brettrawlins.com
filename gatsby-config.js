@@ -8,7 +8,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,6 +23,24 @@ module.exports = {
         path: `${__dirname}/src/posts/`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: "~",
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              escapeEntities: {},
+            }
+          }
+        ]
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
