@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { css } from "@emotion/core"
+
 import Layout from "../components/layout"
 import { formatDate, getPathToPost } from "../utils/formatters"
 
@@ -13,7 +15,7 @@ const Template = ({ data, pageContext }) => {
     <Layout>
       <div>
         <h1>{title}</h1>
-        <p>{formatDate(date)}</p>
+        <p css={css`color: #aaa;`}>{formatDate(date)}</p>
         <div className="blogPost" dangerouslySetInnerHTML={{ __html: html }} />
         {prev && <Link to={getPathToPost(prev.frontmatter.title)}>Prev</Link>}
         {next && <Link to={getPathToPost(next.frontmatter.title)}>Next</Link>}
