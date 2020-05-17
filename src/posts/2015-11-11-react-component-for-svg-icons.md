@@ -13,7 +13,7 @@ I’ve been using React v0.13 which has some trouble handling SVG elements. Last
 
 [Gist: SvgIcon.js](https://gist.github.com/brawlins/e84c28badd0e6172d9e5)
 
-However, with the release of v0.14, React now handles SVG elements fine. You just have to be sure to camelcase the attributes (“xlinkHref” instead of “xlink:href”). [See the release notes](https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#notable-enhancements){:target="_blank"} for details.
+However, with the release of v0.14, React now handles SVG elements fine. You just have to be sure to camelcase the attributes (“xlinkHref” instead of “xlink:href”). <a href="https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#notable-enhancements" target="_blank">See the release notes</a> for details.
 
 I decided to post this anyway just in case it’s useful to anyone.
 
@@ -50,10 +50,10 @@ I usually insert a single SVG document at the top of the `<body>` element that c
 Here’s an example. If I pass the component these props:
 
 ```javascript
-<SvgIcon 
+<SvgIcon
     classNames={['icon', 'spin']}
-    show={this.state.loading} 
-    symbolId="icon-loader" 
+    show={this.state.loading}
+    symbolId="icon-loader"
     wrapperTag="span" />
 ```
 

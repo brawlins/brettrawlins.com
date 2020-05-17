@@ -52,14 +52,14 @@ Adjust your query as needed to select just the posts you want.
 Now, using that query, we'll re-insert them from the clone into our database.
 
 ```sql
-INSERT IGNORE INTO my_database.wp_posts 
+INSERT IGNORE INTO my_database.wp_posts
 SELECT *
 FROM my_database_clone.wp_posts
 WHERE post_modified >= '2014-02-10'
 ORDER BY post_modified DESC
 ```
 
-The `IGNORE` keyword suppresses any duplicate-key errors that would cause the statement to abort. See the documentation on [INSERT Syntax](http://dev.mysql.com/doc/refman/5.6/en/insert.html){:target="_blank"} for details.
+The `IGNORE` keyword suppresses any duplicate-key errors that would cause the statement to abort. See the documentation on <a href="http://dev.mysql.com/doc/refman/5.6/en/insert.html" target="_blank">INSERT Syntax</a> for details.
 
 ## 5. Get associated meta records too
 

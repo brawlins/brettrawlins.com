@@ -21,8 +21,8 @@ Since I had no need for the title column, I removed it. However this created a p
 
 WordPress provides a few hooks to help you manage your custom columns. There is a set of action and filter hooks for doing this with regular posts, and another set for custom post types. Since we're dealing with custom columns on a custom post type, the ones we need are these:
 
-* [`manage_{$post_type}_posts_columns`](http://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns){:target="_blank"}
-* [`manage_{$post_type}_posts_custom_column`](http://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column){:target="_blank"}
+* <a href="http://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns" target="_blank">`manage_{$post_type}_posts_columns`</a>
+* <a href="http://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column" target="_blank">`manage_{$post_type}_posts_custom_column`</a>
 
 The first one allows you to define the columns for your post type, and the second one actually displays them on the edit posts screen.
 
@@ -40,7 +40,7 @@ Then we need to create the callback functions we attached to these hooks. The fi
 ```php
 /**
  * Defines the columns shown for my custom post type
- * 
+ *
  * @param array $columns - the default columns
  */
 public function set_columns($columns)
@@ -67,15 +67,15 @@ The code that adds the admin links normally seen under the title column is found
  *
  * Adds the admin links that are normally seen underneath the title to a
  * different column since we are not using the title column.
- * 
+ *
  * Note: You can only access custom columns and the content column, but not
  * the default ones like title and date.
- * 
+ *
  * This code is mostly copied from the WP core:
  * @see WP_Posts_List_Table::single_row
- * 
- * @param string $column  
- * @param int $post_id 
+ *
+ * @param string $column
+ * @param int $post_id
  */
 public function render_columns($column, $post_id)
 {
@@ -121,7 +121,7 @@ public function render_columns($column, $post_id)
                     $actions['delete'] = "<a class='submitdelete' title='" . esc_attr(__('Delete this item permanently')) . "' href='" . get_delete_post_link($post->ID, '', true) . "'>" . __('Delete Permanently') . "</a>";
             }
 
-            // display admin links    
+            // display admin links
             echo WP_List_Table::row_actions($actions);
             break;
 

@@ -7,7 +7,7 @@ tags:
     - jquery
 ---
 
-The [jQuery UI Datepicker](http://jqueryui.com/datepicker){:target="_blank"} widget is a handy way to add a calendar control to a web page. It's pretty easy to implement and offers a lot of flexibility in terms of customization.
+The <a href="http://jqueryui.com/datepicker" target="_blank">jQuery UI Datepicker</a> widget is a handy way to add a calendar control to a web page. It's pretty easy to implement and offers a lot of flexibility in terms of customization.
 
 By setting the `showButtonPanel` option to true, you get a button that takes you to today's date. However, this button functions a little differently than I expected. I thought it would select today's date in the calendar as if you had clicked on it, but it doesn't. It simply moves the calendar back to the current month (if you have navigated away from it) so that you can see the current date which is highlighted by default.
 

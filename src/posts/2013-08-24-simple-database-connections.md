@@ -11,7 +11,7 @@ The other day I had to explain to someone how to connect to a MySQL database in 
 
 ## 1. Mysqli
 
-The old MySQL extension is deprecated in favor of the [MySQL Improved Extension](http://php.net/manual/en/book.mysqli.php){:target="_blank"}. This extension offers an object-oriented interface, but you can also use the procedural style like its predecessor. Mysqli also includes some more advanced features like prepared statements and stored procedures.
+The old MySQL extension is deprecated in favor of the <a href="http://php.net/manual/en/book.mysqli.php" target="_blank">MySQL Improved Extension</a>. This extension offers an object-oriented interface, but you can also use the procedural style like its predecessor. Mysqli also includes some more advanced features like prepared statements and stored procedures.
 
 ```php
 <?php
@@ -21,7 +21,7 @@ $mysqli = new mysqli('localhost', 'user', 'password', 'database');
 // make sure it worked
 if ($mysqli->connect_error) {
     die('Connection error: ' . $mysqli->connect_error);
-} 
+}
 
 // run a query
 $sql = 'SELECT * FROM my_table';
@@ -39,7 +39,7 @@ $mysqli->close();
 
 ## 2. PDO
 
-PDO stands for [PHP Data Objects](http://www.php.net/manual/en/book.pdo.php){:target="_blank"} which is the latest and greatest data-access API. It includes drivers for many different databases (not just MySQL), so it's very portable. Although really, when was the last time you switched database systems? Probably never. PDO uses an object-oriented interface and also supports advanced features like prepared statements and stored procedures.
+PDO stands for <a href="http://www.php.net/manual/en/book.pdo.php" target="_blank">PHP Data Objects</a> which is the latest and greatest data-access API. It includes drivers for many different databases (not just MySQL), so it's very portable. Although really, when was the last time you switched database systems? Probably never. PDO uses an object-oriented interface and also supports advanced features like prepared statements and stored procedures.
 
 ```php
 <?php

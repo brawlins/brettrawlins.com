@@ -12,7 +12,7 @@ In the past I've always had to make two entries for every new site I add to my l
 1. a line in my hosts file (so the site gets served locally)
 2. a VirtualHost directive in my vhosts file (to tell apache where to find the web files)
 
-This quickly becomes unsustainable. How would it be if I could just add a new folder to my apache web root and immediately load the new site in my browser? The following setup (adapted from [Glen Scott](http://www.glenscott.co.uk/blog/2012/11/10/simple-development-hosts-on-mac/){:target="_blank"}) makes that possible!
+This quickly becomes unsustainable. How would it be if I could just add a new folder to my apache web root and immediately load the new site in my browser? The following setup (adapted from <a href="http://www.glenscott.co.uk/blog/2012/11/10/simple-development-hosts-on-mac/" target="_blank">Glen Scott</a>) makes that possible!
 
 This setup uses the subdomain "local" for all locally developed sites. So if I'm working on a site called "blah.com", my local version would be at "local.blah.com". Here's how you do it:
 
@@ -71,12 +71,12 @@ Create the following file and save it somewhere that makes sense to you. For exa
  * $_SERVER['DOCUMENT_ROOT'] is not set correctly. It defaults to your apache
  * web root, not the document root of the virtual host being served. This
  * script should fix that problem.
- * 
+ *
  * USAGE:
  * In your php.ini file, add the path to this script in the
  * "auto_prepend_file" directive. Then it will be prepended to every PHP
  * script that runs.
- * 
+ *
  * NOTE: The file must exist and be readable by apache or else you get a fatal
  * error because it gets included as if called by require().
  */
@@ -128,6 +128,6 @@ mkdir -p ~/Sites/newdomain.com
 echo 'Hello World!' > ~/Sites/newdomain.com/index.html
 ```
 
-Now visit [http://local.newdomain.com/](http://local.newdomain.com/){:target="_blank"} in your browser and you should see "Hello World!".
+Now visit <a href="http://local.newdomain.com/" target="_blank">http://local.newdomain.com/</a> in your browser and you should see "Hello World!".
 
 That's it!

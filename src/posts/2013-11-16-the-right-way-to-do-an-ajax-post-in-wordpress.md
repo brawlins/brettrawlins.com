@@ -7,7 +7,7 @@ tags:
     - wordpress
 ---
 
-For a long time making ajax calls in Wordpress was very confusing to me. After reading the [Codex](http://codex.wordpress.org/AJAX_in_Plugins){:target="_blank"} and several articles about it, I think I understand it a little better now. When you stop fighting Wordpress and do it the "Wordpress way" it's not too bad. Here's a little plugin that demonstrates how to do an ajax post from the front end the right way.
+For a long time making ajax calls in Wordpress was very confusing to me. After reading the <a href="http://codex.wordpress.org/AJAX_in_Plugins" target="_blank">Codex</a> and several articles about it, I think I understand it a little better now. When you stop fighting Wordpress and do it the "Wordpress way" it's not too bad. Here's a little plugin that demonstrates how to do an ajax post from the front end the right way.
 
 My plugin has two files. The folder looks like this:
 
@@ -64,12 +64,12 @@ class My_Ajax
 
         // make sure the request is legit
         if (!wp_verify_nonce($_POST['nonce'], 'my-frontend-action-nonce')) {
-            exit; 
+            exit;
         }
 
         // print out the POST array
         print_r($_POST);
-        exit; 
+        exit;
     }
 }
 ```
@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
             console.log(response);
         });
         return false;
-    }); 
+    });
 });
 ```
 
@@ -126,12 +126,12 @@ public function frontend_ajax_handler()
 
     // make sure the request is legit
     if (!wp_verify_nonce($_POST['nonce'], 'my-frontend-action-nonce')) {
-        exit; 
+        exit;
     }
 
     // print out the POST array
     print_r($_POST);
-    exit; 
+    exit;
 }
 ```
 
@@ -178,11 +178,11 @@ jQuery(document).ready(function($) {
             console.log(response);
         });
         return false;
-    }); 
+    });
 });
 ```
 
 That's it! Hopefully that helps clarify the process a little. Here's some other good reading on the subject of using ajax in Wordpress:
 
-* [5 tips for using AJAX in WordPress](http://www.garyc40.com/2010/03/5-tips-for-using-ajax-in-wordpress/){:target="_blank"}
-* [How To Use AJAX In WordPress](http://wp.smashingmagazine.com/2011/10/18/how-to-use-ajax-in-wordpress/){:target="_blank"}
+* <a href="http://www.garyc40.com/2010/03/5-tips-for-using-ajax-in-wordpress/" target="_blank">5 tips for using AJAX in WordPress</a>
+* <a href="http://wp.smashingmagazine.com/2011/10/18/how-to-use-ajax-in-wordpress/" target="_blank">How To Use AJAX In WordPress</a>

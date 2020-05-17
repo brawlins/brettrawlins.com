@@ -9,11 +9,11 @@ tags:
 
 Sometime you may need to mass delete a bunch of tags that are unused (or maybe only used once). I'm sure there are plugins for this, but then you're trusting someone else's SQL to do deletes on your database. It's just as easy to write your own queries.
 
-One of the quirks of MySQL, as stated in [the manual](http://dev.mysql.com/doc/refman/5.1/en/delete.html){:target="_blank"}, is:
+One of the quirks of MySQL, as stated in <a href="http://dev.mysql.com/doc/refman/5.1/en/delete.html" target="_blank">the manual</a>, is:
 
 > Currently, you cannot delete from a table and select from the same table in a subquery.
 
-There are a few workarounds. One is to create a temporary table of the ID's you need to delete and then reference that in your delete query. Another is to write two nested select statements, using a buffer table with an alias to grab those same ID's, [as explained in this great write-up by Mario Peshev](http://devwp.eu/deleting-wordpress-records-based-on-nested-selects/){:target="_blank"}. 
+There are a few workarounds. One is to create a temporary table of the ID's you need to delete and then reference that in your delete query. Another is to write two nested select statements, using a buffer table with an alias to grab those same ID's, <a href="http://devwp.eu/deleting-wordpress-records-based-on-nested-selects/" target="_blank">as explained in this great write-up by Mario Peshev</a>.
 
 Because one of the tables you need to delete from has a compound key I ran into trouble using the second method, so I decided to go the temporary table route.
 
@@ -64,7 +64,7 @@ This next one is the table where I ran into trouble because it has a compound ke
 -- delete orphaned records
 DELETE FROM tr
 USING wp_term_relationships AS tr
-INNER JOIN to_delete AS d 
+INNER JOIN to_delete AS d
 WHERE d.term_taxonomy_id = tr.term_taxonomy_id
 AND d.object_id = tr.object_id
 ```

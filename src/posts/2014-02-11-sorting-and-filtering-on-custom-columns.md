@@ -13,7 +13,7 @@ WordPress provides a hook that allows you to define which columns are sortable. 
 * `manage_edit-post_sortable_columns`
 * `manage_edit-{$post_type}_sortable_columns`
 
-Although there appears to be no Codex page to document either of these hooks, both [scribu](http://scribu.net/wordpress/custom-sortable-columns.html){:target="_blank"} and [Justin Tadlock](http://justintadlock.com/archives/2011/06/27/custom-columns-for-custom-post-types){:target="_blank"} have published excellent articles explaining how to use them to make your columns sortable.
+Although there appears to be no Codex page to document either of these hooks, both <a href="http://scribu.net/wordpress/custom-sortable-columns.html" target="_blank">scribu</a> and <a href="http://justintadlock.com/archives/2011/06/27/custom-columns-for-custom-post-types" target="_blank">Justin Tadlock</a> have published excellent articles explaining how to use them to make your columns sortable.
 
 The other hook we'll need is `pre_get_posts` which allows us to define custom callbacks to tell WordPress how to sort and filter our columns.
 
@@ -22,8 +22,8 @@ First we add the hooks:
 ```php
 if (is_admin()) {
     add_filter('manage_edit-quote_sortable_columns', array($this, 'register_sortable_columns'));
-    add_action('pre_get_posts', array($this, 'sort_custom_columns'));  
-    add_action('pre_get_posts', array($this, 'filter_custom_columns'));  
+    add_action('pre_get_posts', array($this, 'sort_custom_columns'));
+    add_action('pre_get_posts', array($this, 'filter_custom_columns'));
 }
 ```
 
@@ -32,7 +32,7 @@ The first function simply defines which columns should be sortable. Just add you
 ```php
 /**
  * Adds custom columns to the array of sortable columns
- * 
+ *
  * @param array $columns - the default columns
  */
 public function register_sortable_columns($columns)
@@ -46,12 +46,12 @@ public function register_sortable_columns($columns)
 
 Now WordPress knows which columns should be sortable. However, it doesn't automatically understand *how* to sort them, so you have to provide a function to handle that process.
 
-In this function you have access to the query object, which you can then alter to perform whatever kind of sorting you want. In this example, the data for the custom columns are stored as post_meta values. First we get the column to be sorted on from the query string, and then we tell the query to sort on that meta key. You can easily adapt this to your particular sorting needs by using the appropriate [WP_Query parameters](http://codex.wordpress.org/Class_Reference/WP_Query#Parameters){:target="_blank"}.
+In this function you have access to the query object, which you can then alter to perform whatever kind of sorting you want. In this example, the data for the custom columns are stored as post_meta values. First we get the column to be sorted on from the query string, and then we tell the query to sort on that meta key. You can easily adapt this to your particular sorting needs by using the appropriate <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Parameters" target="_blank">WP_Query parameters</a>.
 
 ```php
 /**
  * Sorts the list on custom columns
- * 
+ *
  * @param object $query
  */
 public function sort_custom_columns($query)
@@ -79,8 +79,8 @@ The last function is similar. Again, the strategy is to alter the query object s
 ```php
 /**
  * Filters the list on custom column values
- * 
- * @param object $query 
+ *
+ * @param object $query
  */
 public function filter_custom_columns($query)
 {

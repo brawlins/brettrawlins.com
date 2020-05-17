@@ -21,4 +21,4 @@ jQuery(document).ready(function($) {
 });
 ```
 
-For more information see the documention on [jQuery.noConflict()](http://api.jquery.com/jQuery.noConflict/){:target="_blank"}.
+For more information see the documention on <a href="http://api.jquery.com/jQuery.noConflict/" target="_blank">jQuery.noConflict()</a>.
