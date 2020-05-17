@@ -6,9 +6,9 @@ tags:
     - shell
 ---
 
-The other day I needed to install some fonts on our ubuntu server that were needed for an email script. Not something you do every day, so I thought I'd make a note of the steps for future reference. 
+The other day I needed to install some fonts on our ubuntu server that were needed for an email script. Not something you do every day, so I thought I'd make a note of the steps for future reference.
 
-# 1. See if the font you need is already installed.
+## 1. See if the font you need is already installed.
 
 To list all the fonts that are installed type:
 ```
@@ -20,16 +20,16 @@ To find a particular font, you can `grep` that list:
 fc-list | grep "Arial"
 ```
 
-If the font is installed, it will show the path to the font file. If not, it will return nothing. 
+If the font is installed, it will show the path to the font file. If not, it will return nothing.
 
 You can also use `fc-match` to find out what the system will use when trying to match the given font:
 ```
 fc-match Arial
 ```
 
-# 2. Search for an installable package.
+## 2. Search for an installable package.
 
-Many fonts are available as `apt` packages on Debian/Ubuntu systems. Packages that contain fonts usually have a name that starts with "fonts-". You can use `apt-cache search [pattern]` to search them. 
+Many fonts are available as `apt` packages on Debian/Ubuntu systems. Packages that contain fonts usually have a name that starts with "fonts-". You can use `apt-cache search [pattern]` to search them.
 
 To search for all font packages type:
 ```
@@ -46,7 +46,7 @@ If you find one you want, you can simply install it:
 apt-get install [package-name]
 ```
 
-# 3. Download the font file and copy it to the server.
+## 3. Download the font file and copy it to the server.
 
 If the font you want is not available as a package, you can probably find it on the internet somewhere. A few places that offer free font downloads are:
 
@@ -60,7 +60,7 @@ The font file will usually have either a `.ttf` (True Type Font) or `.otf` (Open
 scp -C ~/Downloads/myFont.ttf user@server:/usr/local/share/fonts
 ```
 
-# 4. Verify that the font is installed.
+## 4. Verify that the font is installed.
 
 Now log into your server and verify that the font is installed:
 ```
