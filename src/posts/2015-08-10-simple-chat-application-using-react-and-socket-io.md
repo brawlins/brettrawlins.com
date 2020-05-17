@@ -129,7 +129,7 @@ React.render(<MessageList />, document.getElementById('messages'));
 
 Here I've defined a MessageList component which displays an unordered list of messages, followed by the MessageForm component which contains a simple form for posting a new message. MessageForm is nested inside of MessageList. At the bottom we render it by mounting the parent component to the messages div in our HTML.
 
-MessageList owns the array of chat messages, so MessageForm cannot modify it directly. Because of this we have to pass control of the submit handler up the chain to the parent which has access to the messages array. Note that this is done by <a href="https://facebook.github.io/react/tips/communicate-between-components.html" target="_blank">passing properties</a>. When we call the MessageForm component inside the render function of MessageList, we pass it a custom property ("submit") and assign that property a local function ("postIt") which handles the form submission and adds the new message to the array. In the MessageForm component's render function we access the "submit" property we assigned to it above using <span class="lang:js decode:true  crayon-inline">this.props.submit</span>. That property (which now points to a handler function on the parent component) is then assigned to the component's <span class="lang:default decode:true  crayon-inline ">onSubmit</span>  event so that it gets called when the form is submitted.
+MessageList owns the array of chat messages, so MessageForm cannot modify it directly. Because of this we have to pass control of the submit handler up the chain to the parent which has access to the messages array. Note that this is done by <a href="https://facebook.github.io/react/tips/communicate-between-components.html" target="_blank">passing properties</a>. When we call the MessageForm component inside the render function of MessageList, we pass it a custom property ("submit") and assign that property a local function ("postIt") which handles the form submission and adds the new message to the array. In the MessageForm component's render function we access the "submit" property we assigned to it above using `this.props.submit`. That property (which now points to a handler function on the parent component) is then assigned to the component's `onSubmit` event so that it gets called when the form is submitted.
 
 This is the point I mentioned above. It seems like this could quickly get very convoluted if you have many levels of nesting. But that's how you pass things up or down the chain in React.
 
@@ -163,7 +163,7 @@ http.listen(3000, function () {
 });
 ```
 
-The server code creates an http server using Node and some simple routes using Express. Our document root is mapped to <span class="lang:default decode:true  crayon-inline ">/public</span>  and the client libraries are served from <span class="lang:default decode:true  crayon-inline">/bower_components</span> . When Socket.io receives a "connection" event, a new client has connected to the server. We register a callback function for that event, and inside that function we handle other events such as the custom "messageAdded" event that gets emitted from a client when the user adds a message. The server then broadcasts that event out to all the other clients so they stay in sync.
+The server code creates an http server using Node and some simple routes using Express. Our document root is mapped to `/public` and the client libraries are served from `/bower_components`. When Socket.io receives a "connection" event, a new client has connected to the server. We register a callback function for that event, and inside that function we handle other events such as the custom "messageAdded" event that gets emitted from a client when the user adds a message. The server then broadcasts that event out to all the other clients so they stay in sync.
 
 ## Try It Out
 
@@ -171,9 +171,9 @@ To get up and running with this code:
 
 * [Download the files here]()
 * Open up your project folder in the terminal
-* Install the server libraries: <span class="lang:default decode:true  crayon-inline ">npm install</span>
-* Install the client libraries: <span class="lang:default decode:true  crayon-inline ">bower install</span>
-* Start up your server: <span class="lang:default decode:true  crayon-inline ">node server.js</span>
+* Install the server libraries: `npm install`
+* Install the client libraries: `bower install`
+* Start up your server: `node server.js`
 * Open up <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> in two browser windows and chat!
 
 ## Final Thoughts
