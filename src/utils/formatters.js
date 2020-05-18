@@ -20,7 +20,7 @@ function formatDate(dateString) {
 }
 
 function getPathToPost(title) {
-  return '/' + toSlug(title)
+  return '/blog/' + toSlug(title)
 }
 
 module.exports = { toSlug, formatDate, getPathToPost }
