@@ -8,13 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Global, css } from "@emotion/core"
-import styled from "@emotion/styled"
+import { css } from "@emotion/core"
+import "normalize.css"
 
 import Header from "./header"
-import "./layout.css"
-
-const GlobalStylesWrapper = styled.div``
+import "./global.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,37 +27,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStylesWrapper>
-        <Global
-          styles={css`
-            body {
-              background-color: #fff;
-              color: #333;
-              font-family: "Merriweather";
-            }
-            h1, h2, h3, h4, h5, h6 {
-              font-family: "Roboto";
-              margin-top: .4em;
-              margin-bottom: .6em;
-            }
-            p {
-              margin-bottom: 1.5em;
-            }
-            pre, pre[class*="language-"] {
-              margin-bottom: 1.5em;
-            }
-            a, a:link, a:visited, a:hover, a:active {
-              color: #3891A6;
-            }
-            a:hover, a:active {
-              color: #046E8F;
-              text-decoration: underline;
-            }
-            h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-              text-decoration: none;
-            }
-          `}
-        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -77,7 +44,6 @@ const Layout = ({ children }) => {
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
-      </GlobalStylesWrapper>
     </>
   )
 }
