@@ -17,8 +17,8 @@ const Template = ({ data, pageContext }) => {
         <h1>{title}</h1>
         <p css={css`color: #aaa;`}>{formatDate(date)}</p>
         <div className="blogPost" dangerouslySetInnerHTML={{ __html: html }} />
-        {prev && <Link to={getPathToPost(prev.frontmatter.title)}>Prev</Link>}
-        {next && <Link to={getPathToPost(next.frontmatter.title)}>Next</Link>}
+        {prev && <Link css={css`margin-right: 5px;`} to={getPathToPost(prev.frontmatter.title)}>&laquo; Prev</Link>}
+        {next && <Link css={css`margin-left: 5px;`} to={getPathToPost(next.frontmatter.title)}>Next &raquo;</Link>}
       </div>
     </Layout>
   )
