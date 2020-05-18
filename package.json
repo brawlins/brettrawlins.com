@@ -1,0 +1,44 @@
+{
+  "name": "brawlins.github.io",
+  "version": "1.0.0",
+  "description": "Personal blog website",
+  "main": "src/pages/index.js",
+  "repository": "git@github.com:brawlins/brawlins.github.io.git",
+  "author": "Brett Rawlins <brettswww@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "gatsby": "^2.21.22",
+    "gatsby-image": "^2.4.3",
+    "gatsby-plugin-emotion": "^4.3.1",
+    "gatsby-plugin-manifest": "^2.4.2",
+    "gatsby-plugin-offline": "^3.2.1",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sharp": "^2.6.2",
+    "gatsby-plugin-webfonts": "^1.1.2",
+    "gatsby-remark-prismjs": "^3.5.1",
+    "gatsby-source-filesystem": "^2.3.1",
+    "gatsby-transformer-remark": "^2.8.8",
+    "gatsby-transformer-sharp": "^2.5.2",
+    "gh-pages": "^2.2.0",
+    "prismjs": "^1.20.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.0.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
+}
