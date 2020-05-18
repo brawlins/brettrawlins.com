@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,21 +12,24 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <ul>
-        {edges.map(edge => {
-          const { frontmatter, excerpt } = edge.node
-          const { title, date } = frontmatter
-          const path = getPathToPost(title)
-          return (
-            <li>
+      <h2>Blog</h2>
+      {edges.map(edge => {
+        const { frontmatter, excerpt } = edge.node
+        const { title, date } = frontmatter
+        const path = getPathToPost(title)
+        return (
+          <div css={css`
+            margin-bottom: 2em;
+          `}>
+            <h3>
               <Link key={path} to={path}>
                 {title}
               </Link>
-              <div>{excerpt}</div>
-            </li>
-          )
-        })}
-      </ul>
+            </h3>
+            <div>{excerpt}</div>
+          </div>
+        )
+      })}
       <div>
         <Link to="/tags">Browse by tag</Link>
       </div>

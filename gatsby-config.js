@@ -36,11 +36,28 @@ module.exports = {
               showLineNumbers: false,
               noInlineHighlight: false,
               escapeEntities: {},
-            }
-          }
-        ]
-      }
-    }
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Merriweather",
+              variants: ["400", "400i", "700", "700i"],
+            },
+            {
+              family: "Roboto",
+              variants: ["400", "400i", "500", "500i", "700", "700i"],
+            },
+          ],
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
