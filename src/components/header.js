@@ -10,6 +10,7 @@ const Header = ({ siteTitle }) => (
       margin-bottom: 1.45rem;
     `}
   >
+    <style dangerouslySetInnerHTML={{__html: `.no-js {display: hidden}`}} />
     <div
       css={css`
         margin: 0 auto;

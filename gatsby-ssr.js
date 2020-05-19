@@ -3,9 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
-const { renderToString } = require("react-dom/server")
-
-exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-  const bodyHTML = renderToString(bodyComponent)
-  replaceBodyHTMLString(bodyHTML)
-}
+// Prevent flash of unstyled content (FOUC) by adding this class temporarily while the javascript downloads
+exports.onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+      className: 'no-js'
+    });
+};
