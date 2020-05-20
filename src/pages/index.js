@@ -21,12 +21,12 @@ const IndexPage = ({ data }) => {
           <div css={css`
             margin-bottom: 2em;
           `}>
-            <h3>
+            <h2>
               <Link key={path} to={path}>
                 {title}
               </Link>
-            </h3>
-            <div>{excerpt}</div>
+            </h2>
+            <p>{excerpt}</p>
           </div>
         )
       })}
