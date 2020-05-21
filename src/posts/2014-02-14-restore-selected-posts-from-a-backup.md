@@ -76,9 +76,9 @@ ORDER BY post_id, meta_id
 Now just add the `INSERT` statement and select only from the postmeta table to insert them:
 
 ```sql
+INSERT IGNORE INTO my_database.wp_postmeta
 SELECT *
-FROM my_database_clone.wp_postmeta m
-INNER JOIN my_database_clone.wp_posts p ON p.ID = m.post_id
+FROM my_database_clone.wp_postmeta
 WHERE post_modified >= '2014-02-10'
 ORDER BY post_id, meta_id
 ```

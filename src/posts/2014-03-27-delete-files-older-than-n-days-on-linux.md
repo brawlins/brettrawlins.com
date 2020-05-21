@@ -15,16 +15,16 @@ First you’ll want to run this command to make sure you’re selecting just the
 sudo find /path/to/dir -type f -mtime +7
 ```
 
-Once you’re sure you want to proceed, you can add the remove command to the end like this:
+Once you’re sure you want to proceed, you can add the delete option to the end like this:
 
 ```shell
-sudo find /path/to/dir -type f -mtime +7 -exec rm {} \;
+sudo find /path/to/dir -type f -mtime +7 -delete
 ```
 
 Here’s an explanation of each part:
 
 * `sudo`  – Perform the action as if you were root (avoids permission denied errors)
-* `find /path/to/dir`  – Find files in this directory path
+* `find /path/to/dir`  – Find files in this directory
 * `-type f`  – Only get files of type “file” (excludes directories)
 * `-mtime +7`  – Only get files whose timestamp is greater than 7 days old
-* `-exec rm {} \;`  – Perform the “rm” action on the results
+* `-delete`  – Delete all the matched files
