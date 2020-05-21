@@ -11,16 +11,15 @@ function toSlug(title) {
   return slug
 }
 
-function formatDate(dateString) {
-  return new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  }).format(new Date(dateString))
+function formatDate(dateString, dateStyle = "long") {
+  let formattingOptions = { dateStyle }
+  return new Intl.DateTimeFormat("en-US", formattingOptions).format(
+    new Date(dateString)
+  )
 }
 
 function getPathToPost(title) {
-  return '/blog/' + toSlug(title)
+  return "/blog/" + toSlug(title)
 }
 
 module.exports = { toSlug, formatDate, getPathToPost }
