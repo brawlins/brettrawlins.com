@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { getPathToPost } from "../utils/formatters"
+import { formatDate, getPathToPost } from "../utils/formatters"
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark
@@ -21,6 +21,10 @@ const IndexPage = ({ data }) => {
           <div css={css`
             margin-bottom: 2em;
           `}>
+            <div css={css`
+              color: #999;
+              font-size: .8em;
+            `}>{formatDate(date, "medium")}</div>
             <h2>
               <Link key={path} to={path}>
                 {title}
