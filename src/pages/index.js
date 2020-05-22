@@ -64,10 +64,6 @@ const flexHeader = css`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2.5em;
-
-  span {
-    margin-right: 20px;
-  }
 `
 
 const postWrapper = css`
