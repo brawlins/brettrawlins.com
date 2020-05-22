@@ -12,19 +12,13 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>Blog</h2>
+      <h2 css={css`margin-bottom: 40px;`}>Blog</h2>
       {edges.map(edge => {
         const { frontmatter, excerpt } = edge.node
-        const { title, date } = frontmatter
+        const { title } = frontmatter
         const path = getPathToPost(title)
         return (
-          <div css={css`
-            margin-bottom: 2em;
-          `}>
-            <div css={css`
-              color: #999;
-              font-size: .8em;
-            `}>{formatDate(date, "medium")}</div>
+          <div css={postWrapper}>
             <h2>
               <Link key={path} to={path}>
                 {title}
@@ -58,3 +52,20 @@ export const query = graphql`
 `
 
 export default IndexPage
+
+const postWrapper = css`
+  margin-bottom: 2.5em;
+
+  .postDate {
+    color: #999;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+  }
+`
