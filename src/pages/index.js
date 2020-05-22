@@ -4,15 +4,20 @@ import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { formatDate, getPathToPost } from "../utils/formatters"
+import { getPathToPost, pluralize } from "../utils/formatters"
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark
+  let postCount = edges.length || 0
+  let postCountString = postCount + ' ' + pluralize(postCount, 'Post')
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h2 css={css`margin-bottom: 40px;`}>Blog</h2>
+      <div css={flexHeader}>
+        <h2 css={css`margin: 0`}>Blog</h2>
+        <span>{postCountString}</span>
+      </div>
       {edges.map(edge => {
         const { frontmatter, excerpt } = edge.node
         const { title } = frontmatter
@@ -52,6 +57,18 @@ export const query = graphql`
 `
 
 export default IndexPage
+
+const flexHeader = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5em;
+
+  span {
+    margin-right: 20px;
+  }
+`
 
 const postWrapper = css`
   margin-bottom: 2.5em;
