@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <div css={flexHeader}>
-        <h2 css={css`margin: 0`}>Blog</h2>
+        <h1 css={css`margin: 0`}>Blog</h1>
         <span>{postCountString}</span>
       </div>
       {edges.map(edge => {
