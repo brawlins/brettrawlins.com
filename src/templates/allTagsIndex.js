@@ -9,18 +9,17 @@ const AllTagsTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Tags" />
-      <div>
-        <ul>
-          {tags &&
-            tags.map((tagName, index) => {
-              return (
-                <li key={index}>
-                  <Link to={`/tags/${tagName}`}>{tagName}</Link>
-                </li>
-              )
-            })}
-        </ul>
-      </div>
+      <h1>Tags</h1>
+      {tags &&
+        tags.map((tagName, index) => {
+          return (
+            <div>
+              <Link key={index} to={`/tags/${tagName}`}>
+                # {tagName}
+              </Link>
+            </div>
+          )
+        })}
     </Layout>
   )
 }

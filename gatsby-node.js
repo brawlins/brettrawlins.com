@@ -70,6 +70,7 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   tags
                 }
+                excerpt
               }
             }
           }
