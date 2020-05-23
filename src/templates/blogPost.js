@@ -17,16 +17,37 @@ const Template = ({ data, pageContext }) => {
       <SEO title={title} />
       <div>
         <h1>{title}</h1>
-        <p css={css`color: #aaa;`}>{formatDate(date)}</p>
+        <p
+          css={css`
+            color: #aaa;
+          `}
+        >
+          {formatDate(date)}
+        </p>
         <div className="blogPost" dangerouslySetInnerHTML={{ __html: html }} />
-        <div css={tagsWrapper}>
-          {tags.length
-            ? tags.map(tagName => (<Link key={tagName} to={`/tags/${tagName}`}>#{tagName}</Link>))
-            : null
-          }
+
+        {tags.length ? (
+          <div css={tagsWrapper}>
+            <span>Tags:</span>
+            {tags.map(tagName => (
+              <Link key={tagName} to={`/tags/${tagName}`}>
+                #{tagName}
+              </Link>
+            ))}
+          </div>
+        ) : null}
+        <div css={navLinksWrapper}>
+          {prev && (
+            <Link to={getPathToPost(prev.frontmatter.title)}>
+              &laquo; {prev.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link to={getPathToPost(next.frontmatter.title)}>
+              {next.frontmatter.title} &raquo;
+            </Link>
+          )}
         </div>
-        {prev && <Link css={css`margin-right: 5px;`} to={getPathToPost(prev.frontmatter.title)}>&laquo; Prev</Link>}
-        {next && <Link css={css`margin-left: 5px;`} to={getPathToPost(next.frontmatter.title)}>Next &raquo;</Link>}
       </div>
     </Layout>
   )
@@ -49,9 +70,24 @@ export default Template
 
 const tagsWrapper = css`
   display: flex;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 
+  span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
   a {
     margin-right: 10px;
+  }
+`
+const navLinksWrapper = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+
+  a + a {
+    margin-left: 10px;
   }
 `
