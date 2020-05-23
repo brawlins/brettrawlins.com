@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { formatDate, getPathToPost } from "../utils/formatters"
 
 const Template = ({ data, pageContext }) => {
@@ -13,6 +14,7 @@ const Template = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <div>
         <h1>{title}</h1>
         <p css={css`color: #aaa;`}>{formatDate(date)}</p>

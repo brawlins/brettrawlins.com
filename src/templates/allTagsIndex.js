@@ -1,11 +1,14 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const AllTagsTemplate = ({ data, pageContext }) => {
   const { tags } = pageContext
   return (
     <Layout>
+      <SEO title="Tags" />
       <div>
         <ul>
           {tags &&
