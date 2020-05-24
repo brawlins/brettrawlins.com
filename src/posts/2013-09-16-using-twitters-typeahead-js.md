@@ -72,7 +72,7 @@ $('.example').typeahead({
     name: 'example',
     local: data,
     limit: 7,
-    template: '<p> ()</p>',
+    template: "<p>{{value}} ({{country_code}})</p>",
     engine: Hogan
 }).on('typeahead:selected', function(event, datum) {
     window.location = datum.url
@@ -83,17 +83,19 @@ $('.example').typeahead({
 </html>
 ```
 
-This example uses a local data source and illustrates how to use a simple template with hogan.js. It also uses one of the custom events provided by the API to run a callback function when an item is selected from the list. In this case we're simply grabbing the URL of that item and pointing the browser there. Looks like this:
+This example uses a local data source and illustrates how to use a simple template with hogan.js. It also uses one of the custom events provided by the API to run a callback function when an item is selected from the list. In this case we're simply grabbing the URL of that item and pointing the browser there.
+
+It looks like this:
 
 *Shows suggestions as you type*
 
-![Typeahead suggestions](/images/twitter-typeahead-1.png)
+![Typeahead suggestions](../images/twitter-typeahead-1.png)
 
 *Arrow down to choose one*
 
-![Arrow down to choose suggestion](/images/twitter-typeahead-2.png)
+![Arrow down to choose suggestion](../images/twitter-typeahead-2.png)
 
-If you saved any custom properties in your datum objects, you can access them later in the template and the callback function. In both cases the datum object is passed as an argument. In the template use the double mustache notation: {% raw %}`{{my-property}}`{% endraw %}. In the callback function just use standard object notation: `datum.my-property`.
+If you saved any custom properties in your datum objects, you can access them later in the template and the callback function. In both cases the datum object is passed as an argument. In the template use the double mustache notation: `{{my-property}}`. In the callback function just use standard object notation: `datum.my-property`.
 
 ## Resources
 
