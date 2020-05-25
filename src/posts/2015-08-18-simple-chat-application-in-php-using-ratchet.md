@@ -8,7 +8,7 @@ tags:
     - websockets
 ---
 
-In the previous post I made a [demo chat app using React and Socket.io]({% post_url 2015-08-10-simple-chat-application-using-react-and-socket-io %}). In this post we'll build that same app again, this time in PHP using Ratchet.
+In the previous post I made a [demo chat app using React and Socket.io](/blog/simple-chat-application-using-react-and-socket-io). In this post we'll build that same app again, this time in PHP using Ratchet.
 
 There's a nice PHP library called <a href="http://socketo.me/" target="_blank">Ratchet</a> that simplifies working with web sockets. In this example I use <a href="https://getcomposer.org/" target="_blank">Composer</a> to manage the PHP library dependencies and handle autoloading.
 

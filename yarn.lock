@@ -5189,6 +5189,13 @@ gatsby-page-utils@^0.2.1:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-catch-links@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.3.2.tgz#c6a24b7c1ea067bc48684db01448d0c44de658c5"
+  dependencies:
+    "@babel/runtime" "^7.9.6"
+    escape-string-regexp "^1.0.5"
+
 gatsby-plugin-emotion@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.3.1.tgz#0485579a1f5ab4ddb563ee097d2f913c1bd9a606"
