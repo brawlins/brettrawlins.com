@@ -85,6 +85,18 @@ module.exports = {
         excludePattern: /(excluded-link|external)/,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `brettrawlins.com`,
+        short_name: `brettrawlins.com`,
+        start_url: `/`,
+        background_color: `#075E7E`,
+        theme_color: `#075E7E`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
