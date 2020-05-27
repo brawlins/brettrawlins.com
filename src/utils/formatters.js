@@ -4,7 +4,7 @@ function toSlug(title) {
     slug = title
       .toLowerCase()
       // Separate words with hyphens
-      .replace(/[\s\.]+/g, "-")
+      .replace(/[\s.]+/g, "-")
       // Remove unwanted characters
       .replace(/[^\w-]/g, "")
   }
