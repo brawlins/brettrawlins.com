@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import { css } from "@emotion/core"
 
+import logo from "../images/icon.png"
+
 const Header = ({ siteTitle }) => (
   <header css={siteHeader}>
     <div>
@@ -14,7 +16,8 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          Brett Rawlins
+          <img src={logo} alt="logo" />
+          <span>Brett Rawlins</span>
         </Link>
       </h1>
       <nav>
@@ -39,6 +42,15 @@ const siteHeader = css`
     font-size: 22px;
     font-weight: normal;
     margin: 0;
+  }
+  h1 a {
+    display: flex;
+    align-items: center;
+  }
+  h1 img {
+    height: 44px;
+    width: 44px;
+    margin-right: 10px;
   }
   nav {
     display: flex;
