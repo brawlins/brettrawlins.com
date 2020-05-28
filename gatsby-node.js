@@ -103,7 +103,8 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+// Add a slug field (the relative URL path) to the node for each post
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     // Get title from node
