@@ -9,10 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
-import "prismjs/themes/prism.css"
 
 import Header from "./header"
-import "./global.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
