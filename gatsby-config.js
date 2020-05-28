@@ -45,27 +45,25 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: false,
             },
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: {
-          google: [
-            {
-              family: "Merriweather",
-              variants: ["400", "400i", "700", "700i"],
-            },
-            {
-              family: "Roboto",
-              variants: ["400", "400i", "500", "500i", "700", "700i"],
-            },
-          ],
-        },
+        fonts: [
+          {
+            family: "Merriweather",
+            variants: ["400", "400i", "700", "700i"],
+          },
+          {
+            family: "Roboto",
+            variants: ["400", "400i", "500", "500i", "700", "700i"],
+          },
+        ],
       },
     },
     {
@@ -94,7 +92,7 @@ module.exports = {
         background_color: `#075E7E`,
         theme_color: `#075E7E`,
         display: `standalone`,
-        icon: `src/images/icon.png`
+        icon: `src/images/icon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
