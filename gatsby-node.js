@@ -71,6 +71,9 @@ exports.createPages = ({ graphql, actions }) => {
                   tags
                 }
                 excerpt
+                fields {
+                  slug
+                }
               }
             }
           }
@@ -82,7 +85,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Create page for each post
         posts.forEach(({ node }, index) => {
           const title = node.frontmatter.title
-          const path = getPathToPost(title)
+          const path = node.fields.slug
           createPage({
             path,
             component: blogPostTemplate,
@@ -97,4 +100,19 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    // Get title from node
+    let title = node.frontmatter.title
+    // Create slug from title instead of filename
+    let slug = getPathToPost(title);
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
+    })
+  }
 }

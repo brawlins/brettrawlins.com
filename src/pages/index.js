@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { getPathToPost, pluralize } from "../utils/formatters"
+import { pluralize } from "../utils/formatters"
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark
@@ -19,13 +19,13 @@ const IndexPage = ({ data }) => {
         <span>{postCountString}</span>
       </div>
       {edges.map(edge => {
-        const { frontmatter, excerpt } = edge.node
+        const { frontmatter, excerpt, fields } = edge.node
         const { title } = frontmatter
-        const path = getPathToPost(title)
+        const { slug } = fields
         return (
           <div css={postWrapper}>
             <h2>
-              <Link key={path} to={path}>
+              <Link key={slug} to={slug}>
                 {title}
               </Link>
             </h2>
@@ -50,6 +50,9 @@ export const query = graphql`
             date
           }
           excerpt
+          fields {
+            slug
+          }
         }
       }
     }

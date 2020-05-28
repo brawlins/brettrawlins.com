@@ -4,12 +4,12 @@ import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { formatDate, getPathToPost } from "../utils/formatters"
+import { formatDate } from "../utils/formatters"
 
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, fields } = markdownRemark
   const { title, date, tags } = frontmatter
 
   return (
@@ -38,12 +38,12 @@ const Template = ({ data, pageContext }) => {
         ) : null}
         <div css={navLinksWrapper}>
           {prev && (
-            <Link to={getPathToPost(prev.frontmatter.title)}>
+            <Link to={prev.fields.slug}>
               &laquo; {prev.frontmatter.title}
             </Link>
           )}
           {next && (
-            <Link to={getPathToPost(next.frontmatter.title)}>
+            <Link to={next.fields.slug}>
               {next.frontmatter.title} &raquo;
             </Link>
           )}
@@ -61,6 +61,9 @@ export const query = graphql`
         title
         date
         tags
+      }
+      fields {
+        slug
       }
     }
   }

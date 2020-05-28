@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { getPathToPost, pluralize } from "../utils/formatters"
+import { pluralize } from "../utils/formatters"
 
 const SingleTagTemplate = ({ data, pageContext }) => {
   const { posts, tagName } = pageContext
@@ -20,12 +20,13 @@ const SingleTagTemplate = ({ data, pageContext }) => {
       </div>
       {posts &&
         posts.map((post, index) => {
-          let { frontmatter, excerpt } = post
+          let { frontmatter, excerpt, fields } = post
           let { title } = frontmatter
+          let { slug } = fields
           return (
             <div key={index} css={postWrapper}>
               <h2>
-                <Link to={getPathToPost(title)}>{title}</Link>
+                <Link to={slug}>{title}</Link>
               </h2>
               <p>{excerpt}</p>
             </div>
