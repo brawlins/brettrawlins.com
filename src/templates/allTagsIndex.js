@@ -1,20 +1,20 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const AllTagsTemplate = ({ data, pageContext }) => {
+const AllTagsTemplate = ({ pageContext }) => {
   const { tags } = pageContext
   return (
     <Layout>
       <SEO title="Tags" />
       <h1>Tags</h1>
       {tags &&
-        tags.map((tagName, index) => {
+        tags.map(tagName => {
           return (
             <div>
-              <Link key={index} to={`/tags/${tagName}`}>
+              <Link key={tagName} to={`/tags/${tagName}`}>
                 # {tagName}
               </Link>
             </div>

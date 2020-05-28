@@ -90,6 +90,7 @@ exports.createPages = ({ graphql, actions }) => {
             path,
             component: blogPostTemplate,
             context: {
+              // Used as unique ID to query for the post in the page template
               title: title,
               prev: index === 0 ? null : posts[index - 1].node,
               next: index === posts.length - 1 ? null : posts[index + 1].node,

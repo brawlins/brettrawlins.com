@@ -1,12 +1,12 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { pluralize } from "../utils/formatters"
 
-const SingleTagTemplate = ({ data, pageContext }) => {
+const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tagName } = pageContext
   let postCount = posts.length || 0
   let postCountString = postCount + " " + pluralize(postCount, "Post")

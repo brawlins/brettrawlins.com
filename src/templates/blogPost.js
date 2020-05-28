@@ -7,9 +7,10 @@ import SEO from "../components/seo"
 import { formatDate } from "../utils/formatters"
 
 const Template = ({ data, pageContext }) => {
+  console.log({ data })
   const { next, prev } = pageContext
   const { markdownRemark } = data
-  const { frontmatter, html, fields } = markdownRemark
+  const { frontmatter, html } = markdownRemark
   const { title, date, tags } = frontmatter
 
   return (
