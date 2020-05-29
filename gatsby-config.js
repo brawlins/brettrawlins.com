@@ -26,6 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        // Prevents italicizing words with underscores in them (e.g. mod_vhost_alias)
+        pedantic: false,
         plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
