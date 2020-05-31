@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Import a database from the command line
-date:   2013-07-30 17:23:43 -0600
+date:   2013-07-30
 tags:
     - command line
     - mysql

@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Import tags from a CSV"
-date:   2014-02-25 17:27:02 -0600
+date:   2014-02-25
 tags:
     - wordpress
 ---

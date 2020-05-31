@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Simple chat application in PHP using Ratchet"
-date:   2015-08-18 11:22:32 -0700
+date:   2015-08-18
 tags:
     - php
     - ratchet

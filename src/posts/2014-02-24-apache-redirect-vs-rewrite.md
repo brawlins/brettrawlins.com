@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Apache redirect vs. rewrite"
-date:   2014-02-24 15:58:02 -0600
+date:   2014-02-24
 tags:
     - apache
 ---

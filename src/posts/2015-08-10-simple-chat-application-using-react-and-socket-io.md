@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Simple chat application using React and Socket.io"
-date:   2015-08-10 11:20:22 -0700
+date:   2015-08-10
 tags:
     - node.js
     - react

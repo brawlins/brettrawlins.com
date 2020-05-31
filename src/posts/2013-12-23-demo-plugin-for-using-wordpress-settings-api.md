@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Demo plugin for using WordPress Settings API
-date:   2013-12-23 11:53:52 -0600
+date:   2013-12-23
 tags:
     - wordpress
 ---

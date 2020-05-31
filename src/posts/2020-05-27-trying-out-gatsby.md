@@ -1,6 +1,6 @@
 ---
 title:  "Trying out Gatsby"
-date:   2020-05-27 16:00 -0600
+date:   2020-05-27
 tags:
     - gatsby
 ---

@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Limitations of WP_Query
-date:   2013-06-29 13:51:08 -0600
+date:   2013-06-29
 tags:
     - php
     - wordpress
@@ -28,22 +27,22 @@ $sql = '
     WHERE post_type = "clinical"
     AND post_status = "publish"
 
-    UNION 
+    UNION
 
     SELECT *
     FROM wp_posts
     WHERE post_type = "post"
     AND post_status = "publish"
-    AND ID IN 
+    AND ID IN
     (
-        SELECT object_id 
+        SELECT object_id
         FROM wp_term_relationships r
         INNER JOIN wp_term_taxonomy x USING (term_taxonomy_id)
         INNER JOIN wp_terms t USING (term_id)
         WHERE t.slug LIKE "clinical%"
     )
 
-    ORDER BY post_date DESC 
+    ORDER BY post_date DESC
     LIMIT 5
 ';
 $clinical_news = $wpdb->get_results($sql);

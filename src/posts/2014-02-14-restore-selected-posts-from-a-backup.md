@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Restore selected posts from a backup"
-date:   2014-02-14 12:02:45 -0600
+date:   2014-02-14
 tags:
     - mysql
     - wordpress

@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Passing checkbox (boolean) values in ajax
-date:   2013-05-28 20:34:04 -0600
+date:   2013-05-28
 tags:
     - ajax
     - javascript

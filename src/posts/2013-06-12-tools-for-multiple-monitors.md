@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Tools for multiple monitors
-date:   2013-06-12 17:53:56 -0600
+date:   2013-06-12
 tags:
     - apps
     - tools

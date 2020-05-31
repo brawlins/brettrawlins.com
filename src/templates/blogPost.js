@@ -4,14 +4,14 @@ import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { formatDate } from "../utils/formatters"
 
 const Template = ({ data, pageContext }) => {
   console.log({ data })
   const { next, prev } = pageContext
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-  const { title, date, tags } = frontmatter
+  const { frontmatter, html, fields } = markdownRemark
+  const { title, tags } = frontmatter
+  const { localDate } = fields
 
   return (
     <Layout>
@@ -23,7 +23,7 @@ const Template = ({ data, pageContext }) => {
             color: #aaa;
           `}
         >
-          {formatDate(date)}
+          {localDate}
         </p>
         <div className="blogPost" dangerouslySetInnerHTML={{ __html: html }} />
 
@@ -60,11 +60,11 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
         tags
       }
       fields {
         slug
+        localDate
       }
     }
   }

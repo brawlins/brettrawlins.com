@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Setting up dynamic virtual hosts on your Mac
-date:   2013-04-02 20:51:49 -0600
+date:   2013-04-02
 tags:
     - apache
     - mac

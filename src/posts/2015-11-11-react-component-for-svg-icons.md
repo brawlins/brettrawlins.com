@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "React component for SVG icons"
-date:   2015-11-11 09:33:49 -0600
+date:   2015-11-11
 tags:
     - react
     - svg

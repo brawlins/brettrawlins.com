@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Using Twitter's typeahead.js
-date:   2013-09-16 21:44:35 -0600
+date:   2013-09-16
 tags:
     - javascript
 ---

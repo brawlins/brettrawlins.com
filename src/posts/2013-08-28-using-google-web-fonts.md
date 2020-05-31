@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Using Google web fonts
-date:   2013-08-28 21:15:38 -0600
+date:   2013-08-28
 tags:
     - css
 ---

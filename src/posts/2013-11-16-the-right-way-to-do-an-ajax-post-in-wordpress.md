@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  The right way to do an ajax post in Wordpress
-date:   2013-11-16 15:47:24 -0600
+date:   2013-11-16
 tags:
     - ajax
     - wordpress

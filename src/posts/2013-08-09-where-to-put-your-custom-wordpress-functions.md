@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Where to put your custom WordPress functions
-date:   2013-08-09 16:58:22 -0600
+date:   2013-08-09
 tags:
     - wordpress
 ---

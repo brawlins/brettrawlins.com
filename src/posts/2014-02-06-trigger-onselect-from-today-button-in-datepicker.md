@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Trigger onSelect from today button in Datepicker
-date:   2014-02-06 09:48:30 -0600
+date:   2014-02-06
 tags:
     - javascript
     - jquery

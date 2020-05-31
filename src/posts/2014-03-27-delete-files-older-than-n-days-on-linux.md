@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Delete files older than N days on Linux"
-date:   2014-03-27 15:58:26 -0600
+date:   2014-03-27
 tags:
     - command line
 ---
