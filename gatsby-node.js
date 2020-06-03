@@ -115,15 +115,5 @@ exports.onCreateNode = ({ node, actions }) => {
       name: `slug`,
       value: slug
     })
-
-    // Get date from the node and format it to local timezone
-    // "moment(...) is local mode. Ambiguous input (without offset) is assumed to be local time."
-    // @see https://momentjs.com/docs/#/parsing/
-    let localDate = moment(node.frontmatter.date, "YYYY-MM-DD").format("LL")
-    createNodeField({
-      node,
-      name: `localDate`,
-      value: localDate
-    })
   }
 }

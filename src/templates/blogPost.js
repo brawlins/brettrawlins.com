@@ -6,12 +6,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Template = ({ data, pageContext }) => {
-  console.log({ data })
   const { next, prev } = pageContext
   const { markdownRemark } = data
-  const { frontmatter, html, fields } = markdownRemark
-  const { title, tags } = frontmatter
-  const { localDate } = fields
+  const { frontmatter, html } = markdownRemark
+  const { title, date, tags } = frontmatter
 
   return (
     <Layout>
@@ -23,7 +21,7 @@ const Template = ({ data, pageContext }) => {
             color: #aaa;
           `}
         >
-          {localDate}
+          {date}
         </p>
         <div className="blogPost" dangerouslySetInnerHTML={{ __html: html }} />
 
@@ -60,11 +58,11 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "LL")
         tags
       }
       fields {
         slug
-        localDate
       }
     }
   }
