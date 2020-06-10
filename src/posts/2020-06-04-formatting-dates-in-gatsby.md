@@ -50,7 +50,7 @@ console.log(moment("2020-06-04").format());
 // 2020-06-04T00:00:00-06:00
 ```
 
-However, when I ran my GraphQL query *without* the `formatString`, the `date` field came back as this:
+However, when I ran my GraphQL query *without* the `formatString`, the `date` field came back in UTC time like this:
 
 ```
 2020-06-04T00:00:00.000Z
