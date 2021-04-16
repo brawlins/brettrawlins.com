@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Proper-casing names when they are stored in all caps
-date:   2013-09-30 16:48:23 -0600
+date:   2013-09-30
 tags:
     - php
 ---

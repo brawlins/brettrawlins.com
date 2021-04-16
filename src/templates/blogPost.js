@@ -3,22 +3,50 @@ import { graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
-import { formatDate, getPathToPost } from "../utils/formatters"
+import SEO from "../components/seo"
 
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { title, date } = frontmatter
+  const { title, date, tags } = frontmatter
 
   return (
     <Layout>
+      <SEO title={title} />
       <div>
         <h1>{title}</h1>
-        <p css={css`color: #aaa;`}>{formatDate(date)}</p>
+        <p
+          css={css`
+            color: #aaa;
+          `}
+        >
+          {date}
+        </p>
         <div className="blogPost" dangerouslySetInnerHTML={{ __html: html }} />
-        {prev && <Link css={css`margin-right: 5px;`} to={getPathToPost(prev.frontmatter.title)}>&laquo; Prev</Link>}
-        {next && <Link css={css`margin-left: 5px;`} to={getPathToPost(next.frontmatter.title)}>Next &raquo;</Link>}
+
+        {tags.length ? (
+          <div css={tagsWrapper}>
+            <span>Tags:</span>
+            {tags.map(tagName => (
+              <Link key={tagName} to={`/tags/${tagName}`}>
+                #{tagName}
+              </Link>
+            ))}
+          </div>
+        ) : null}
+        <div css={navLinksWrapper}>
+          {prev && (
+            <Link to={prev.fields.slug}>
+              &laquo; {prev.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link to={next.fields.slug}>
+              {next.frontmatter.title} &raquo;
+            </Link>
+          )}
+        </div>
       </div>
     </Layout>
   )
@@ -30,10 +58,38 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        date(formatString: "LL")
+        tags
+      }
+      fields {
+        slug
       }
     }
   }
 `
 
 export default Template
+
+const tagsWrapper = css`
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  a {
+    margin-right: 10px;
+  }
+`
+const navLinksWrapper = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+
+  a + a {
+    margin-left: 10px;
+  }
+`

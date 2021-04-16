@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  MySQL SSH tunnel
-date:   2013-06-17 16:17:35 -0600
+date:   2013-06-17
 tags:
     - command line
     - mysql

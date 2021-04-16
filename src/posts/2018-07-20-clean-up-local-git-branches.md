@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Clean up local git branches"
-date:   2018-07-20 07:50:00 -0600
+date:   2018-07-20
 tags:
     - shell
     - git

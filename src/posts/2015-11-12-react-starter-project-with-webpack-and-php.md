@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "React starter project with webpack and PHP"
-date:   2015-11-12 09:10:25 -0600
+date:   2015-11-12
 tags:
     - react
     - webpack

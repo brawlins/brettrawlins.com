@@ -1,12 +1,11 @@
 ---
-layout: post
 title:  Adding custom columns (including the admin links)
-date:   2014-02-07 17:46:39 -0700
+date:   2014-02-07
 tags:
     - wordpress
 ---
 
-*This is a 2-part post discussing how to set up custom columns for a custom post type in WordPress. Part 1 focuses on adding custom columns, displaying them in the edit posts screen, and adding the admin links to one of those columns. [Part 2]({% post_url 2014-02-11-sorting-and-filtering-on-custom-columns %}) discusses how to enable sorting and filtering on those custom columns.*
+*This is a 2-part post discussing how to set up custom columns for a custom post type in WordPress. Part 1 focuses on adding custom columns, displaying them in the edit posts screen, and adding the admin links to one of those columns. [Part 2](/blog/sorting-and-filtering-on-custom-columns) discusses how to enable sorting and filtering on those custom columns.*
 
 For this demo I'll reference a use-case that I had recently. I needed to create a custom post type of quote. Each quote really only needed 4 pieces of information:
 
@@ -139,4 +138,4 @@ public function render_columns($column, $post_id)
 }
 ```
 
-Using these two hooks you should be able to customize the columns and values that are displayed on the edit posts screen for your custom post type. In [Part 2]({% post_url 2014-02-11-sorting-and-filtering-on-custom-columns %}) we'll talk about how to make those columns sortable and filterable.
+Using these two hooks you should be able to customize the columns and values that are displayed on the edit posts screen for your custom post type. In [Part 2](/blog/sorting-and-filtering-on-custom-columns) we'll talk about how to make those columns sortable and filterable.

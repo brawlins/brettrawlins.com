@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Git branch workflow
-date:   2013-08-28 18:38:08 -0600
+date:   2013-08-28
 tags:
     - command line
     - git

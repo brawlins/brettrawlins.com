@@ -5,6 +5,7 @@
  */
 
 const path = require("path")
+const moment = require("moment")
 const { getPathToPost } = require("./src/utils/formatters")
 
 const createTagPages = (createPage, posts) => {
@@ -70,6 +71,10 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   tags
                 }
+                excerpt
+                fields {
+                  slug
+                }
               }
             }
           }
@@ -81,11 +86,12 @@ exports.createPages = ({ graphql, actions }) => {
         // Create page for each post
         posts.forEach(({ node }, index) => {
           const title = node.frontmatter.title
-          const path = getPathToPost(title)
+          const path = node.fields.slug
           createPage({
             path,
             component: blogPostTemplate,
             context: {
+              // Used as unique ID to query for the post in the page template
               title: title,
               prev: index === 0 ? null : posts[index - 1].node,
               next: index === posts.length - 1 ? null : posts[index + 1].node,
@@ -96,4 +102,18 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
+}
+
+// Add a slug field (the relative URL path) to the node for each post
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    // Create slug from title instead of filename
+    let slug = getPathToPost(node.frontmatter.title);
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
+    })
+  }
 }

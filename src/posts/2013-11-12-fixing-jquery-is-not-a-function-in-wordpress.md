@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Fixing "$ is not a function" in Wordpress
-date:   2013-11-12 20:05:50 -0600
+date:   2013-11-12
 tags:
     - jquery
     - wordpress

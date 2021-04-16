@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Setting up dynamic virtual hosts on your Mac
-date:   2013-04-02 20:51:49 -0600
+date:   2013-04-02
 tags:
     - apache
     - mac
@@ -57,7 +56,7 @@ Paste in this block (adjust the path to your apache web root as necessary):
 
 ## 3. Fix your DOCUMENT_ROOT
 
-One side-effect of using mod_vhost_alias is that your DOCUMENT_ROOT defaults to the apache web root, not the document root of the virtual host being served. So if you use the PHP global `$_SERVER['DOCUMENT_ROOT']` in your code, it will contain the wrong value. To fix this problem, we'll tell PHP to require a file that correctly defines our document root before running any PHP scripts.
+One side-effect of using `mod_vhost_alias` is that your `DOCUMENT_ROOT` defaults to the apache web root, not the document root of the virtual host being served. So if you use the PHP global `$_SERVER['DOCUMENT_ROOT']` in your code, it will contain the wrong value. To fix this problem, we'll tell PHP to require a file that correctly defines our document root before running any PHP scripts.
 
 Create the following file and save it somewhere that makes sense to you. For example at: `~/Sites/_config/set-doc-root.php`.
 

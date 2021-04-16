@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Filtering Kaltura list results
-date:   2013-09-12 12:56:05 -0600
+date:   2013-09-12
 tags:
     - kaltura
     - php

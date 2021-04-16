@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Simple Database Connections
-date:   2013-08-24 16:32:25 -0600
+date:   2013-08-24
 tags:
     - mysql
     - php

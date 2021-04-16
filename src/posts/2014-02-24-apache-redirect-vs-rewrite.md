@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "Apache redirect vs. rewrite"
-date:   2014-02-24 15:58:02 -0600
+date:   2014-02-24
 tags:
     - apache
 ---
@@ -23,7 +22,7 @@ A redirect is a server response that tells the client to make a new, modified re
 ><p class="dialog">Client: “Fine. GET /otherpage.php then.”</p>
 ><p class="dialog">Server: “OK. Here’s the content of /otherpage.php.”</p>
 
-Because a second request is made, now for a different resource, the URL obviously changes in the browser's address bar. The user is aware that his original request has been redirected to something different than what he typed.
+Because a second request is made, now for a different resource, the URL changes in the browser's address bar. The user is aware that his original request has been redirected to something different than what he typed.
 
 The redirect rule in your .htaccess file would look like this:
 

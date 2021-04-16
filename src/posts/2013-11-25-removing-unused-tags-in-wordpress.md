@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Removing unused tags in Wordpress
-date:   2013-11-25 12:24:24 -0600
+date:   2013-11-25
 tags:
     - mysql
     - wordpress

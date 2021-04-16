@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  CSS background patterns
-date:   2013-05-31 09:28:54 -0600
+date:   2013-05-31
 tags:
     - css
 ---

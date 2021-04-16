@@ -1,12 +1,11 @@
 ---
-layout: post
 title:  Sorting and filtering on custom columns
-date:   2014-02-11 18:38:50 -0700
+date:   2014-02-11
 tags:
     - wordpress
 ---
 
-*This is a 2-part post discussing how to set up custom columns for a custom post type in WordPress. [Part 1]({% post_url 2014-02-07-adding-custom-columns-including-the-admin-links %}) focuses on adding custom columns, displaying them in the edit posts screen, and adding the admin links to one of those columns. Part 2 discusses how to enable sorting and filtering on those custom columns.*
+*This is a 2-part post discussing how to set up custom columns for a custom post type in WordPress. [Part 1](/blog/adding-custom-columns-including-the-admin-links) focuses on adding custom columns, displaying them in the edit posts screen, and adding the admin links to one of those columns. Part 2 discusses how to enable sorting and filtering on those custom columns.*
 
 WordPress provides a hook that allows you to define which columns are sortable. There's a generic one and another one for custom post types:
 

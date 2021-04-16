@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  Display an RSS feed using the Google Feed API
-date:   2013-08-23 18:11:49 -0600
+date:   2013-08-23
 tags:
     - javascript
 ---
