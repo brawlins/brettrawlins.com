@@ -30,18 +30,19 @@ In terms of privacy, I wanted to meet these specific criteria. The service:
 
 ## Alternatives
 
-I did a lot of research and tried out a lot of different products before making a decision. Here are the replacement apps I ended up using:
+I did a lot of research and tried out a lot of different products before making a decision. Here are the best replacement apps I found:
 
 - Google Calendar -> [Proton Calendar][pcal]
-- Google Chrome -> [Brave][brave]
+- Google Chrome -> [Brave][brave], [Firefox][ffox], or [DuckDuckGo][ddgo]
 - Google Contacts -> [NextCloud][nextcloud]
-- Google Drive -> [NextCloud][nextcloud]
+- Google Drive -> [NextCloud][nextcloud], [Sync][sync], [icedrive][icedrive], or [pCloud][pCloud]
 - Google Fi -> [Republic Wireless][repwi]
 - Google Keep -> [NextCloud][nextcloud], or [Standard Notes][stnotes]
 - Google Mail -> [Proton Mail][pmail]
 - Google Messages -> [Signal][signal]
 - Google Photos -> [Plex][plex]
 - Google Play Music -> [Plex][plex]
+- Microsoft Office -> [Only Office][ooffice]
 - Facebook -> [Gab][gab]
 - Twitter -> [Gab][gab]
 
@@ -71,3 +72,7 @@ I think those three things give you a pretty good foundation, and then you can p
 [plex]: https://www.plex.tv/
 [ddgo]: https://duckduckgo.com/ 
 [ffox]: https://www.mozilla.org/en-US/firefox/browsers/
+[sync]: https://www.sync.com/
+[icedrive]: https://icedrive.net/
+[ooffice]: https://www.onlyoffice.com/
+[pCloud]: https://www.pcloud.com/
