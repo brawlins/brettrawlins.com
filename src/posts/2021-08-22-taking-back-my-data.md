@@ -22,9 +22,9 @@ I wanted to maintain the basic level of functionality that my family was used to
 In terms of privacy, I wanted to meet these specific criteria. The service:
 
 - does not track me
-- does not sell me to advertisers
+- does not sell my data to advertisers
 - does not store my data unless it's encrypted
-- does not have an opinion about my content (doesn't censor)
+- does not censor content
 - provides end-to-end encryption
 - is not hosted on (dependent on) other big tech that could take it down
 
