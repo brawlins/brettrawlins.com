@@ -30,7 +30,7 @@ In terms of privacy, I wanted to meet these specific criteria. The service:
 
 ## Alternatives
 
-I did a lot of research and tried out a lot of different products before making a decision. Here are the best replacement apps I found:
+I did a lot of research and tried out a lot of different products. Here are the best replacement apps I found:
 
 - Google Calendar -> [Proton Calendar][pcal]
 - Google Chrome -> [Brave][brave], [Firefox][ffox], or [DuckDuckGo][ddgo]
@@ -46,7 +46,7 @@ I did a lot of research and tried out a lot of different products before making 
 - Facebook -> [Gab][gab]
 - Twitter -> [Gab][gab]
 
-Most of these services are free. A few have a free base level and charge for extras. Some of them are self-hosted, which is not for everyone, but there are also hosted alternatives that use end-to-end encryption. I plan to write another post about how to host your own data if that's something you're interested in. 
+Most of these services are free. A few have a free base level and charge for extras. Some of them are self-hosted, which is not for everyone, but there are also hosted alternatives that use end-to-end encryption.
 
 ## Getting Started
 
