@@ -2,7 +2,7 @@
 title:  "Taking Back My Data"
 date:   2021-08-22
 tags:
-    - data
+    - privacy
 ---
 
 Recently I finished a big project that took a few months to complete. I decided to migrate all of my family's data away from Google products and host some of it on my own server. Over the years, without fully realizing it I had given control of nearly all of my data to big tech companies, in particular Google. 
