@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,21 +50,6 @@ module.exports = {
               maxWidth: 590,
               linkImagesToOriginal: false,
             },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: "Merriweather",
-            variants: ["400", "400i", "700", "700i"],
-          },
-          {
-            family: "Roboto",
-            variants: ["400", "400i", "500", "500i", "700", "700i"],
           },
         ],
       },

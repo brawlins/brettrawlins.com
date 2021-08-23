@@ -17,9 +17,9 @@ The other reason was the censorship and cancel culture we've seen so much of lat
 
 ## Criteria
 
-I wanted to keep my data secure, but not have to change all of my habits. I wanted to be able to share calendars, files, and tasks with my wife, have contacts work with my phone, type or search notes on my phone, have files sync between devices, etc. I needed something that would work on different platforms: Mac or Windows, Android or iOS. In a nutshell, I wanted to maintain the basic level of functionality that my family was used to, but also have privacy. 
+I wanted to maintain the basic level of functionality that my family was used to, but also have privacy. I wanted to be able to share calendars, files, and tasks with my wife, have contacts work with my phone, have files sync between devices, etc. I also needed something that would work on different platforms: Mac or Windows, Android or iOS. 
 
-Specifically, I wanted to meet these privacy criteria. The service:
+In terms of privacy, I wanted to meet these specific criteria. The service:
 
 - does not track me
 - does not sell me to advertisers
