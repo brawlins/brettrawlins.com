@@ -1,5 +1,5 @@
 ---
-title:  "Formatting Dates in Gatsby"
+title:  "Formatting dates in Gatsby"
 date:   2020-06-04
 tags:
     - gatsby

@@ -1,5 +1,5 @@
 ---
-title:  "Taking Back My Data"
+title:  "Taking back my data"
 date:   2021-08-22
 tags:
     - privacy
