@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
-    "deploy": "npm run build && gh-pages -d public -b release -r git@github.com:brawlins/brawlins.github.io.git",
+    "deploy": "npm run build && gh-pages -d public -b main -r git@github.com:brawlins/brawlins.github.io.git",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "preload-fonts": "gatsby-preload-fonts",
