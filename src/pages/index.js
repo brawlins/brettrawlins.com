@@ -20,10 +20,11 @@ const IndexPage = ({ data }) => {
       </div>
       {edges.map(edge => {
         const { frontmatter, excerpt, fields } = edge.node
-        const { title } = frontmatter
+        const { title, date } = frontmatter
         const { slug } = fields
         return (
           <div css={postWrapper}>
+            <h5 css={css`color: var(--gray25)`}>{date}</h5>
             <h2>
               <Link key={slug} to={slug}>
                 {title}
@@ -47,7 +48,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            date
+            date(formatString: "LL")
           }
           excerpt
           fields {
