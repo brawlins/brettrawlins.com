@@ -76,6 +76,13 @@ h5 a,
 h6 a {
   text-decoration: none;
 }
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: inherit;
+}
 
 /* Light theme styles */
 @media (prefers-color-scheme: light) {
@@ -108,12 +115,5 @@ h6 a {
   a:hover,
   a:active {
     color: var(--blue4);
-  }
-  .token.operator,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .style .token.string {
-    background-color: inherit;
   }
 }
