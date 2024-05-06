@@ -18,7 +18,7 @@ I came up with two possible solutions:
 
 ## Solution 1 - Rotate and save
 
-In the end, this is solution I went with because it seemed more robust. Although re-saving the image is a lossy process, there was no significant reduction in quality, and it was a one-and-done solution.
+In the end, this is the solution I went with because it seemed more robust. Although re-saving the image is a lossy process, there was no significant reduction in quality, and it was a one-and-done solution.
 
 The actual process of rotating the image is more complicated than I wanted to deal with, so I ended up using the [disintegration/imaging](https://pkg.go.dev/github.com/disintegration/imaging) package. With that in place, it's basically a one-liner:
 
