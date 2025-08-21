@@ -1,23 +1,39 @@
 {
-  "name": "my-app",
+  "name": "brettrawlins.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint . --ext .js,.jsx --fix",
+    "lint:check": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,md,mdx,css}": "prettier --write",
+    "*.{js,jsx}": "eslint --fix"
   },
   "dependencies": {
+    "next": "15.5.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.0"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.33.0",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.0",
-    "@eslint/eslintrc": "^3"
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4"
   }
 }
