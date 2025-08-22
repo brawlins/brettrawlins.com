@@ -28,6 +28,12 @@ export default function SiteHeader() {
               Blog
             </Link>
             <Link
+              href="/tags"
+              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+            >
+              Tags
+            </Link>
+            <Link
               href="/about"
               className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
             >
