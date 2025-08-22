@@ -7,7 +7,7 @@ import { createSlug } from "@/lib/utils";
 export default function PostCard({ post }) {
   return (
     <article className="group cursor-pointer">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:shadow-black/20 transition-all duration-300 border border-gray-700">
         {post.image && (
           <div className="aspect-video relative overflow-hidden">
             <Image
@@ -21,18 +21,18 @@ export default function PostCard({ post }) {
         )}
 
         <div className="p-6">
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+          <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
             <time dateTime={post.date}>{post.formattedDate}</time>
           </div>
 
           <Link href={post.url}>
-            <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+            <h2 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
               {post.title}
             </h2>
           </Link>
 
           {post.excerpt && (
-            <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+            <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
           )}
 
           {post.tags && post.tags.length > 0 && (
@@ -41,7 +41,7 @@ export default function PostCard({ post }) {
                 <Link
                   key={tag}
                   href={`/tags/${createSlug(tag.toLowerCase())}`}
-                  className="inline-block bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full hover:bg-blue-100 transition-colors"
+                  className="inline-block bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded-full hover:bg-blue-800/60 transition-colors border border-blue-800/30"
                 >
                   {tag}
                 </Link>

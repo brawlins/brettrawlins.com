@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-50 flex flex-col">
+      <body className="min-h-screen bg-gray-900 flex flex-col text-gray-200">
         <SiteHeader />
         <main className="flex-grow">{children}</main>
         <SiteFooter />

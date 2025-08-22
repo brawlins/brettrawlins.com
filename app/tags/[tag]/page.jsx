@@ -27,8 +27,8 @@ export default function TagPage({ params }) {
   }
 
   return (
-    <section className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">
+    <section className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8 bg-gray-900 min-h-screen">
+      <h1 className="text-3xl font-bold text-white mb-6">
         Posts tagged with &quot;{tag}&quot;
       </h1>
       <div className="grid gap-8 md:grid-cols-2">

@@ -1,11 +1,11 @@
 export default function AboutPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 py-8 bg-gray-900 min-h-screen">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-4xl font-bold text-white mb-4">
           👋 Hi, I&apos;m Brett!
         </h1>
-        <p className="text-lg text-gray-600 leading-relaxed">
+        <p className="text-lg text-gray-300 leading-relaxed">
           I&apos;m a full-stack software engineer. I love building new things
           and learning about web technologies. This is where I write about
           things I learn. The more I learn, the more I realize how much I

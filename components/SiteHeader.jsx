@@ -3,13 +3,13 @@ import Search from "./Search";
 
 export default function SiteHeader() {
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Site Title */}
           <Link
             href="/"
-            className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+            className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
           >
             Brett Rawlins
           </Link>
@@ -23,19 +23,19 @@ export default function SiteHeader() {
           <nav className="flex items-center space-x-8">
             <Link
               href="/blog"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-gray-300 hover:text-white font-medium transition-colors"
             >
               Blog
             </Link>
             <Link
               href="/tags"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-gray-300 hover:text-white font-medium transition-colors"
             >
               Tags
             </Link>
             <Link
               href="/about"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-gray-300 hover:text-white font-medium transition-colors"
             >
               About
             </Link>

@@ -9,8 +9,8 @@ export default function AllTagsPage() {
   });
 
   return (
-    <section className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">All Tags</h1>
+    <section className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8 bg-gray-900 min-h-screen">
+      <h1 className="text-3xl font-bold text-white mb-6">All Tags</h1>
       <ul className="flex flex-wrap gap-3">
         {Array.from(tags)
           .sort()
@@ -18,7 +18,7 @@ export default function AllTagsPage() {
             <li key={tag}>
               <Link
                 href={`/tags/${createSlug(tag)}`}
-                className="inline-block px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-gray-800 hover:text-blue-600 text-sm font-medium"
+                className="inline-block px-4 py-2 bg-gray-800 rounded-lg shadow-sm hover:shadow-lg hover:bg-gray-700 transition-all duration-200 text-gray-200 hover:text-blue-400 text-sm font-medium border border-gray-700"
               >
                 {tag}
               </Link>
