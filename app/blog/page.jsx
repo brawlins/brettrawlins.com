@@ -11,7 +11,7 @@ export default function PostsPage() {
     .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <section className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-4">
           <h1 className="text-4xl font-bold text-gray-900">All Posts</h1>
@@ -33,6 +33,6 @@ export default function PostsPage() {
           <p className="text-gray-500 text-lg">No posts found.</p>
         </div>
       )}
-    </div>
+    </section>
   );
 }

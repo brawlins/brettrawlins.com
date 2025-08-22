@@ -1,6 +1,6 @@
 import { allPosts } from "contentlayer/generated";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import PostCard from "@/components/PostCard";
 
 export async function generateStaticParams() {
   const tags = new Set();
@@ -31,23 +31,11 @@ export default function TagPage({ params }) {
       <h1 className="text-3xl font-bold text-gray-900 mb-6">
         Posts tagged with &quot;{tag}&quot;
       </h1>
-      <ul className="space-y-4">
+      <div className="grid gap-8 md:grid-cols-2">
         {taggedPosts.map(post => (
-          <li key={post.slug}>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
-              <div className="text-xl font-semibold text-gray-800 hover:text-blue-600">
-                {post.title}
-              </div>
-              <div className="text-sm text-gray-500 mt-1">
-                {new Date(post.date).toLocaleDateString()}
-              </div>
-            </Link>
-          </li>
+          <PostCard key={post._id} post={post} />
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
