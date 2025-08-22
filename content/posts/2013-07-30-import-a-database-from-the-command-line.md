@@ -2,7 +2,7 @@
 title:  Import a database from the command line
 date:   2013-07-30
 tags:
-    - command line
+    - shell
     - mysql
 ---
 

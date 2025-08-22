@@ -2,7 +2,7 @@
 title:  "Delete files older than N days on Linux"
 date:   2014-03-27
 tags:
-    - command line
+    - shell
 ---
 
 Today I needed to delete a bunch of old log files to clear up some room on our server. Here’s a handy shortcut that I found to delete any files that are older than a given number of days old.

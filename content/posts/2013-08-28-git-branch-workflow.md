@@ -2,7 +2,7 @@
 title:  Git branch workflow
 date:   2013-08-28
 tags:
-    - command line
+    - shell
     - git
 ---
 

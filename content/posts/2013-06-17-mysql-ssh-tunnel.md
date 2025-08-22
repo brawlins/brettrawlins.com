@@ -2,7 +2,7 @@
 title:  MySQL SSH tunnel
 date:   2013-06-17
 tags:
-    - command line
+    - shell
     - mysql
     - php
 ---
