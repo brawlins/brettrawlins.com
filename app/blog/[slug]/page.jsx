@@ -30,7 +30,7 @@ export default function PostPage({ params }) {
         {/* Back to posts link */}
         <div className="mb-8">
           <Link
-            href="/posts"
+            href="/blog"
             className="inline-flex items-center text-blue-600 hover:text-blue-800"
           >
             <svg

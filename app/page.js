@@ -35,7 +35,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-gray-900">Recent Posts</h2>
           {hasMorePosts && (
             <Link
-              href="/posts"
+              href="/blog"
               className="text-blue-600 hover:text-blue-700 font-medium transition-colors flex items-center"
             >
               View all posts
@@ -76,7 +76,7 @@ export default function HomePage() {
             Showing {recentPosts.length} of {totalPosts} posts
           </p>
           <Link
-            href="/posts"
+            href="/blog"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
           >
             Browse All Posts

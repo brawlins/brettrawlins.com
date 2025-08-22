@@ -22,10 +22,10 @@ export default function SiteHeader() {
           {/* Navigation */}
           <nav className="flex items-center space-x-8">
             <Link
-              href="/posts"
+              href="/blog"
               className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
             >
-              Posts
+              Blog
             </Link>
             <Link
               href="/about"

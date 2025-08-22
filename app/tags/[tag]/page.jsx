@@ -33,7 +33,7 @@ export default function TagPage({ params }) {
         {taggedPosts.map(post => (
           <li key={post.slug}>
             <Link
-              href={`/posts/${post.slug}`}
+              href={`/blog/${post.slug}`}
               className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <div className="text-xl font-semibold text-gray-800 hover:text-blue-600">
