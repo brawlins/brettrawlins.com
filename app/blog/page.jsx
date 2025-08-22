@@ -15,11 +15,10 @@ export default function PostsPage() {
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-4">
           <h1 className="text-4xl font-bold text-white">All Posts</h1>
-          <span className="text-lg text-gray-400">({posts.length})</span>
+          <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-m font-medium text-gray-400 inset-ring inset-ring-gray-400/20">
+            {posts.length}
+          </span>
         </div>
-        <p className="text-lg text-gray-300">
-          Discover insights, tutorials, and thoughts on web development
-        </p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

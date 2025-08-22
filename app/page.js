@@ -21,11 +21,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="mb-12 text-center">
         <h1 className="text-5xl font-bold text-white mb-6">
-          Welcome to My Blog
+          🚀 Building with code
         </h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          A full-stack software engineer&apos;s journey through web
-          technologies, learning, and building new things.
+        <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Thoughts on web technologies, learning, and building new things.
         </p>
       </div>
 
