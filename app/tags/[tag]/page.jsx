@@ -15,7 +15,9 @@ export async function generateStaticParams() {
 }
 
 export default function TagPage({ params }) {
-  const tag = params.tag;
+  // Convert slug back to tag
+  const tag = params.tag.replace(/-/g, " ");
+
   const taggedPosts = allPosts
     .filter(post => post.tags?.some(t => t.toLowerCase() === tag))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // Sort by date descending

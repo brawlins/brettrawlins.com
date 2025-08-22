@@ -1,5 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import Link from "next/link";
+import { createSlug } from "@/lib/utils";
 
 export default function AllTagsPage() {
   const tags = new Set();
@@ -16,7 +17,7 @@ export default function AllTagsPage() {
           .map(tag => (
             <li key={tag}>
               <Link
-                href={`/tags/${tag}`}
+                href={`/tags/${createSlug(tag)}`}
                 className="inline-block px-4 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-gray-800 hover:text-blue-600 text-sm font-medium capitalize"
               >
                 {tag}

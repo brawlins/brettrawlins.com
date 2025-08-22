@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { allPosts } from "contentlayer/generated";
+import { createSlug } from "@/lib/utils";
 
 export default function PostPage({ params }) {
   const post = allPosts.find(post => post.slug === params.slug);
@@ -80,7 +81,7 @@ export default function PostPage({ params }) {
                 {post.tags.map(tag => (
                   <Link
                     key={tag}
-                    href={`/tags/${tag.toLowerCase()}`}
+                    href={`/tags/${createSlug(tag.toLowerCase())}`}
                     className="inline-block bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full hover:bg-blue-100 transition-colors"
                   >
                     {tag}
