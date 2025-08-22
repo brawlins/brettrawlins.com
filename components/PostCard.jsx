@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { createSlug } from "@/lib/utils";
 
 export default function PostCard({ post }) {
   return (
@@ -39,7 +40,7 @@ export default function PostCard({ post }) {
               {post.tags.slice(0, 3).map(tag => (
                 <Link
                   key={tag}
-                  href={`/tags/${tag.toLowerCase()}`}
+                  href={`/tags/${createSlug(tag.toLowerCase())}`}
                   className="inline-block bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full hover:bg-blue-100 transition-colors"
                 >
                   {tag}

@@ -28,7 +28,7 @@ export default function TagPage({ params }) {
 
   return (
     <section className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6 capitalize">
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">
         Posts tagged with &quot;{tag}&quot;
       </h1>
       <ul className="space-y-4">
