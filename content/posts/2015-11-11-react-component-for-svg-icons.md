@@ -30,7 +30,7 @@ it would choke on the `xlink:href` attribute and throw an error.
 
 ## The solution
 
-The workaround involves using React’s `dangerouslySetInnerHTML` property. If you create an HTML element (say a <span> tag), you can set its inner HTML using this property and then React doesn’t care what you put in there. It trusts that you know what you’re doing.
+The workaround involves using React’s `dangerouslySetInnerHTML` property. If you create an HTML element (say a `<span>` tag), you can set its inner HTML using this property and then React doesn’t care what you put in there. It trusts that you know what you’re doing.
 
 The implementation looks like this:
 

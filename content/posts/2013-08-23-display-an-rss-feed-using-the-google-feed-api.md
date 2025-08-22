@@ -62,36 +62,3 @@ A good place to put this is just before the closing `</body>` tag of your page. 
 ```
 
 ## 4. Here's the output:
-
-<div id="feed-container"></div>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">// <![CDATA[
-    // load Google Feed API
-    google.load("feeds", "1");
-    // specify callback function
-    google.setOnLoadCallback(showFeed);
-    // define function
-    function showFeed() {
-        // get feed container
-        var container = document.getElementById("feed-container");
-        // set up feed
-        var feed = new google.feeds.Feed("http://feeds.feedburner.com/nettuts");
-        feed.setNumEntries(5);
-        // load it
-        feed.load(function(result) {
-            if (!result.error) {
-                // add heading
-                var heading = document.createElement("h3");
-                heading.innerHTML = '<a href="' + result.feed.link + '">' + result.feed.title + '</a>';
-                container.appendChild(heading);
-                // add entries
-                for (var i = 0; i < result.feed.entries.length; i++) {
-                    var entry = result.feed.entries[i];
-                    console.log(entry);
-                    var li = document.createElement("li");
-                    li.innerHTML = '<a href="' + entry.link + '">' + entry.title + '</a>';
-                    container.appendChild(li);
-                }
-            }
-        });
-    }
-// ]]></script>

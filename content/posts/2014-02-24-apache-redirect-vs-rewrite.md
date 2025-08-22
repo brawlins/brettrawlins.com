@@ -13,10 +13,6 @@ Apache rewrite rules can be very confusing at times. They're very powerful, but 
 
 A redirect is a server response that tells the client to make a new, modified request. The dialog goes something like this:
 
-<style>
-    .dialog { font-family: andale mono, times; font-style: normal; }
-</style>
-
 > <p class="dialog">Client: “GET /page.php.”</p>
 > <p class="dialog">Server: “Sorry, /page.php has moved. Ask for /otherpage.php instead”.</p>
 > <p class="dialog">Client: “Fine. GET /otherpage.php then.”</p>

@@ -60,8 +60,6 @@ The next thing I'd look at is your email and calendar. This is where you may hav
 
 I think those three things give you a pretty good foundation, and then you can prioritize more as you wish. The biggest thing is just to be aware of what's happening with your data - where it resides, and whether it's secure or not. Being informed is always good, and being aware of the tradeoffs you make when a product is "free" of charge.
 
-<!-- Links -->
-
 [gab]: https://gab.com/
 [pcal]: https://protonmail.com/blog/calendar-free-web-android/
 [brave]: https://brave.com/
