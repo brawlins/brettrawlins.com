@@ -70,12 +70,6 @@ export default function PostPage({ params }) {
             {post.title}
           </h1>
 
-          {post.excerpt && (
-            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-              {post.excerpt}
-            </p>
-          )}
-
           <div className="flex flex-wrap items-center gap-4 text-gray-600">
             <time dateTime={post.date} className="text-sm">
               Published on {post.formattedDate}

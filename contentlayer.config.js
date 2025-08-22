@@ -3,6 +3,7 @@ import { format, parseISO } from "date-fns";
 import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import removeMd from "remove-markdown";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -55,6 +56,13 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       resolve: post => format(parseISO(post.date), "LLLL d, yyyy"),
     },
+    excerpt: {
+      type: "string",
+      resolve: post => {
+        const plainText = removeMd(post.body.raw);
+        return createWordBoundaryExcerpt(plainText.trim(), 120);
+      },
+    },
   },
 }));
 
@@ -84,3 +92,18 @@ export default makeSource({
     ],
   },
 });
+
+function createWordBoundaryExcerpt(text, maxLength = 100) {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  const truncated = text.slice(0, maxLength);
+  const lastSpaceIndex = truncated.lastIndexOf(" ");
+
+  if (lastSpaceIndex === -1) {
+    return truncated + "...";
+  }
+
+  return truncated.slice(0, lastSpaceIndex) + "...";
+}
