@@ -4,10 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "pre-build": "contentlayer2 build",
-    "content": "contentlayer2 build",
+    "dev": "contentlayer2 dev & next dev --turbopack",
+    "build": "contentlayer2 build && next build --turbopack",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx --fix",
     "lint:check": "eslint . --ext .js,.jsx",
