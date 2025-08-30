@@ -1,5 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -54,7 +54,13 @@ export const Post = defineDocumentType(() => ({
     },
     formattedDate: {
       type: "string",
-      resolve: post => format(parseISO(post.date), "LLLL d, yyyy"),
+      resolve: post => {
+        // remove time portion that gets added, causes timezone issues
+        const dateString = post.date.split("T")[0].split("-");
+        const [year, month, day] = dateString;
+        const date = new Date(year, month - 1, day);
+        return format(date, "LLLL d, yyyy");
+      },
     },
     excerpt: {
       type: "string",
