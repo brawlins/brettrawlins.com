@@ -4,6 +4,7 @@ import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import removeMd from "remove-markdown";
+import { createSlug } from "@/lib/utils";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -46,11 +47,11 @@ export const Post = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: post => `/blog/${post._raw.flattenedPath}`,
+      resolve: post => `/blog/${getPostSlug(post._raw.sourceFileName)}`,
     },
     slug: {
       type: "string",
-      resolve: post => post._raw.flattenedPath,
+      resolve: post => `${getPostSlug(post._raw.sourceFileName)}`,
     },
     formattedDate: {
       type: "string",
@@ -112,4 +113,8 @@ function createWordBoundaryExcerpt(text, maxLength = 100) {
   }
 
   return truncated.slice(0, lastSpaceIndex) + "...";
+}
+
+function getPostSlug(fileName) {
+  return createSlug(fileName.replace(/\..+$/, ""));
 }

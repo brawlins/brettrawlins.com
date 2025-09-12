@@ -1,0 +1,138 @@
+---
+title: "Styling an SVG inserted with CSS after"
+date: 2025-09-06
+tags:
+  - css
+  - svg
+---
+
+The other day I stumbled upon an interesting behavior of the CSS `::after` pseudo-element. I was trying to insert an SVG icon using the `content` property, and discovered that I couldn't style it with CSS like I expected.
+
+## Step 1: Try styling the SVG (doesn't work)
+
+Here's an example to illustrate the problem (<a href="https://codepen.io/brawlins/pen/GgpXwdE" target="_blank">see my codepen</a>). The styles below don't affect the SVG:
+
+```css
+/* This doesn't work as expected */
+a[target="_blank"]::after {
+  content: url("data:image/svg+xml;base64...3ZnPg==");
+  /* Styles don't work! */
+  color: currentColor;
+  height: 0.8em;
+  width: 0.8em;
+}
+```
+
+![SVG Icon](/images/2025-09-06/1.png)
+
+## How `::after` works
+
+Let's back up and have a look at how the CSS `::after` rule works. Per the MDN docs:
+
+> In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property.
+
+You can use it to add decorative elements, icons, or other visual cues without modifying the HTML structure.
+
+This example from the MDN docs uses `::after` to insert the URL from a link element's `href` attribute after the link text, and wrap it in parentheses:
+
+```css
+a::after {
+  content: " (" attr(href) ")";
+}
+```
+
+This works just fine if you're inserting text or HTML. The inserted content behaves like a normal element that you can style with CSS.
+
+If I take my first example above, and insert a text symbol instead of an SVG, it works as expected:
+
+```css
+a::after {
+  content: "↗";
+  /* These styles work! */
+  color: currentColor;
+  display: inline-block;
+  margin-left: 0.25em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+```
+
+![SVG Icon](/images/2025-09-06/0.png)
+
+## The problem of replaced elements
+
+So why didn't it work with my SVG? After some digging, I found the answer in this sentence from the MDN docs:
+
+> `::after` pseudo-elements can't be applied to _replaced elements_ such as `<img>`, whose contents are determined by external resources and not affected by the current document's styles.
+
+Replaced elements are elements whose content is not directly represented in the document tree, such as `<img>`, `<video>`, or `<svg>`.
+
+The root of the issue is this: When you insert an SVG or image using `::after`, it becomes the content of the pseudo-element, not a separate element itself. This means that:
+
+- CSS properties like width, height, fill, and stroke don't apply because they target the pseudo-element container, not the SVG content within it.
+- The SVG is treated as replaced content, so it remains unaffected by the styles applied to the pseudo-element.
+
+## Solution: use `mask-image`
+
+One workaround is to use the SVG **as a mask** instead of inserting it directly. This way, you can style the pseudo-element container as a background, and use the SVG to define the area that shows through.
+
+In this approach, instead of inserting the SVG content, you:
+
+- Create an empty pseudo-element container
+- Apply a background color to that container
+- Use the SVG as a mask that defines transparency
+
+Now the background color shows through the shape of the SVG.
+
+Revisiting our example, we can take the following steps to achieve the desired effect:
+
+## Step 2: Add a `background-color` to the content area
+
+```css
+a[target="_blank"]::after {
+  content: url("data:image/svg+xml;base64...3ZnPg==");
+  background-color: currentColor;
+  /* Still doesn't work */
+  height: 0.8em;
+  width: 0.8em;
+}
+```
+
+![SVG Icon](/images/2025-09-06/2.png)
+
+## Step 3: Make the content area stylable with `inline-block`
+
+```css
+a[target="_blank"]::after {
+  content: url("data:image/svg+xml;base64...3ZnPg==");
+  display: inline-block; /* makes it stylable */
+  background-color: currentColor;
+  height: 0.8em;
+  width: 0.8em;
+  margin-left: 0.25em;
+  vertical-align: top;
+}
+```
+
+![SVG Icon](/images/2025-09-06/3.png)
+
+## Step 4: Use `mask-image` to apply the SVG as a mask over the background
+
+```css
+a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  height: 0.8em;
+  width: 0.8em;
+  margin-left: 0.25em;
+  vertical-align: top;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml;base64...3ZnPg=="); /* Use the SVG as a mask instead of the content */
+}
+```
+
+![SVG Icon](/images/2025-09-06/4.png)
+
+Now you can control the size and color of the icon using CSS styles on the pseudo-element itself.
