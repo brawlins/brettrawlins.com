@@ -135,3 +135,23 @@ h6:hover .subheading-anchor {
 .prose a[target="_blank"] > p {
   display: inline;
 }
+
+/* Blockquote styling */
+
+q {
+  quotes: U+201C U+201D U+2018 U+2019 U+201C U+201D;
+}
+
+.prose blockquote {
+  background-color: var(--color-slate-700);
+  border-left: 0.8em solid gray;
+  font-style: normal;
+  padding: 1.25em;
+  padding-left: 2em;
+}
+
+.prose blockquote > p {
+  font-size: 1.5em;
+  margin: 0;
+  position: relative;
+}
