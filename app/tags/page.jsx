@@ -18,7 +18,7 @@ export default function AllTagsPage() {
             <li key={tag}>
               <Link
                 href={`/tags/${createSlug(tag)}`}
-                className="inline-block px-4 py-2 bg-gray-800 rounded-lg shadow-sm hover:shadow-lg hover:bg-gray-700 transition-all duration-200 text-gray-200 hover:text-blue-400 text-sm font-medium border border-gray-700"
+                className="inline-block px-4 py-2 bg-blue-900/50 text-blue-300 rounded-full hover:bg-blue-600 hover:text-white hover:scale-110 transition-all duration-200 border border-blue-800/30 hover:border-blue-500 text-sm font-medium"
               >
                 {tag}
               </Link>

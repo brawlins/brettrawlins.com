@@ -83,7 +83,7 @@ export default function PostPage({ params }) {
                     <Link
                       key={tag}
                       href={`/tags/${createSlug(tag.toLowerCase())}`}
-                      className="inline-block bg-blue-900/50 text-blue-300 text-sm px-3 py-1 rounded-full hover:bg-blue-800/60 transition-colors border border-blue-800/30"
+                      className="inline-block bg-blue-900/50 text-blue-300 text-sm px-3 py-1 rounded-full hover:bg-blue-600 hover:text-white hover:scale-110 transition-all duration-200 border border-blue-800/30 hover:border-blue-500"
                     >
                       {tag}
                     </Link>
