@@ -23,19 +23,19 @@ export default function SiteHeader() {
           <nav className="flex items-center space-x-8">
             <Link
               href="/blog"
-              className="text-gray-300 hover:text-white font-medium transition-colors"
+              className="text-gray-300 hover:text-blue-400 font-medium transition-colors"
             >
               Blog
             </Link>
             <Link
               href="/tags"
-              className="text-gray-300 hover:text-white font-medium transition-colors"
+              className="text-gray-300 hover:text-blue-400 font-medium transition-colors"
             >
               Tags
             </Link>
             <Link
               href="/about"
-              className="text-gray-300 hover:text-white font-medium transition-colors"
+              className="text-gray-300 hover:text-blue-400 font-medium transition-colors"
             >
               About
             </Link>

@@ -94,7 +94,7 @@ export default function PostPage({ params }) {
           </header>
 
           {/* Post content */}
-          <div className="prose prose-lg prose-invert max-w-none prose-headings:text-white prose-a:text-blue-400 prose-code:text-pink-300 prose-code:bg-gray-800 prose-pre:bg-gray-800 prose-blockquote:text-gray-300 prose-blockquote:border-gray-600">
+          <div className="prose prose-lg prose-invert max-w-none prose-headings:text-white prose-a:text-blue-400 prose-a:hover:text-blue-300 prose-a:transition-colors prose-code:text-pink-300 prose-code:bg-gray-800 prose-pre:bg-gray-800 prose-blockquote:text-gray-300 prose-blockquote:border-gray-600">
             <MDXContent />
           </div>
         </article>
